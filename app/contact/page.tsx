@@ -1,29 +1,12 @@
-import Image from "next/image";
 import Link from "next/link";
+import SiteHeader from "../components/SiteHeader";
+import SiteFooter from "../components/SiteFooter";
 import { MdWorkspacePremium, MdLocationOn, MdPhone, MdEmail, MdAccessTime, MdEdit, MdLock, MdOpenInNew } from "react-icons/md";
 
 export default function Contact() {
   return (
     <div className="flex min-h-screen flex-col font-sans text-slate-800 bg-white">
-      {/* Header */}
-      <header className="sticky top-0 z-50 flex flex-col bg-white shadow-sm">
-        <div className="flex items-center justify-between px-8 py-4">
-          <div className="flex items-center">
-            <Image src="/logo.png" alt="Lita Finemesh Logo" width={180} height={60} className="h-14 w-auto object-contain" priority />
-          </div>
-          <button className="rounded-full bg-teal-500 px-6 py-2 text-sm font-bold text-white transition hover:bg-teal-600">
-            REQUEST QUOTE -&gt;
-          </button>
-        </div>
-        <div className="bg-[#0A4D7C] h-[30px] w-full">
-          <nav className="hidden md:flex w-full text-sm font-bold text-white h-full">
-            <Link href="/" className="flex-1 flex items-center justify-center hover:text-teal-300 transition h-full">HOME</Link>
-            <Link href="/about" className="flex-1 flex items-center justify-center hover:text-teal-300 transition h-full">ABOUT US</Link>
-            <Link href="/service" className="flex-1 flex items-center justify-center hover:text-teal-300 transition h-full">SERVICES</Link>
-            <Link href="/contact" className="flex-1 flex items-center justify-center text-teal-300 border-b-2 border-teal-300 h-full">CONTACT US</Link>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main className="flex-grow">
         {/* Hero Section */}
@@ -194,60 +177,7 @@ export default function Contact() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-[#003b6b] px-8 py-16 text-slate-300 text-sm border-t-4 border-teal-500">
-        <div className="mx-auto max-w-7xl grid gap-12 md:grid-cols-4 lg:grid-cols-5">
-          <div className="md:col-span-2">
-            <div className="text-2xl font-bold text-white mb-2">
-              <span className="text-teal-500">Lita</span> Finemesh
-            </div>
-            <p className="text-xs text-slate-400 mb-6 italic">Fencing Your Property</p>
-            <p className="mb-8 text-slate-400 pr-12">
-              High-specification industrial wire mesh and architectural boundary solutions engineered for lasting perimeter security.
-            </p>
-            <div className="text-xs">
-              <h4 className="font-bold text-teal-500 uppercase tracking-wider mb-2">HEADQUARTERS &amp; MANUFACTURING FACILITY</h4>
-              <p>Lot 111, Jalan PKNK 2, Kawasan Perusahaan Sg. Petani,<br />08000 Sungai Petani, Kedah, Malaysia</p>
-            </div>
-          </div>
-          
-          <div>
-            <h4 className="mb-6 font-bold text-white uppercase tracking-wider text-xs">COMPANY NAVIGATION</h4>
-            <ul className="space-y-4 text-slate-400">
-              <li><Link href="/" className="hover:text-teal-400 transition">Home</Link></li>
-              <li><Link href="/about" className="hover:text-teal-400 transition">About Us</Link></li>
-              <li><Link href="/service" className="hover:text-teal-400 transition">Services</Link></li>
-              <li><Link href="/contact" className="text-teal-400 transition border-b border-teal-400 pb-1">Contact Us</Link></li>
-            </ul>
-          </div>
-          
-          <div className="md:col-span-2">
-            <h4 className="mb-6 font-bold text-white uppercase tracking-wider text-xs">BUSINESS HOURS</h4>
-            <div className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-3 text-slate-400 mb-8">
-              <span>Mon - Fri:</span>
-              <span>8:30 AM - 5:30 PM</span>
-              <span>Sat:</span>
-              <span>8:30 AM - 1:00 PM</span>
-              <span>Sun &amp; PH:</span>
-              <span>Closed</span>
-            </div>
-            
-            <div className="bg-[#002a4d] p-4 rounded-lg border border-[#004e8c]">
-              <h5 className="text-[10px] font-bold text-teal-500 uppercase tracking-wider mb-1">DIRECT SALES HP</h5>
-              <p className="text-xl font-bold text-white tracking-wide">019-444 7178</p>
-            </div>
-          </div>
-        </div>
-        
-        <div className="mx-auto max-w-7xl mt-16 pt-8 border-t border-[#004e8c]/50 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
-          <p>&copy; 2024 Lita Finemesh Industries Sdn Bhd. All Rights Reserved. ISO 9001:2015 Certified.</p>
-          <div className="flex gap-4 mt-4 md:mt-0">
-            <span>TIM GROUP AFFILIATE</span>
-            <span className="text-[#004e8c]">•</span>
-            <span>SIRIM ACCREDITED TESTING</span>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

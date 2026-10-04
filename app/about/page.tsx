@@ -1,92 +1,111 @@
-import Image from "next/image";
 import Link from "next/link";
-import { MdWorkspacePremium, MdCheckCircle, MdVerifiedUser, MdDescription, MdPhone, MdFileDownload } from "react-icons/md";
+import SiteHeader from "../components/SiteHeader";
+import SiteFooter from "../components/SiteFooter";
+import HeroBrandRow from "../components/HeroBrandRow";
+import HeroSectionShell from "../components/HeroSectionShell";
+import {
+  MdWorkspacePremium,
+  MdVerifiedUser,
+  MdDescription,
+  MdPhone,
+  MdFileDownload,
+  MdPrecisionManufacturing,
+} from "react-icons/md";
 
 export default function About() {
   return (
     <div className="flex min-h-screen flex-col font-sans text-slate-800 bg-white">
-      {/* Header */}
-      <header className="sticky top-0 z-50 flex flex-col bg-white shadow-sm">
-        <div className="flex items-center justify-between px-8 py-4">
-          <div className="flex items-center">
-            <Image src="/logo.png" alt="Lita Finemesh Logo" width={180} height={60} className="h-14 w-auto object-contain" priority />
-          </div>
-          <button className="rounded-full bg-teal-500 px-6 py-2 text-sm font-bold text-white transition hover:bg-teal-600">
-            REQUEST QUOTE -&gt;
-          </button>
-        </div>
-        <div className="bg-[#0A4D7C] h-[30px] w-full">
-          <nav className="hidden md:flex w-full text-sm font-bold text-white h-full">
-            <Link href="/" className="flex-1 flex items-center justify-center hover:text-teal-300 transition h-full">HOME</Link>
-            <Link href="/about" className="flex-1 flex items-center justify-center text-teal-300 border-b-2 border-teal-300 h-full">ABOUT US</Link>
-            <Link href="/service" className="flex-1 flex items-center justify-center hover:text-teal-300 transition h-full">SERVICES</Link>
-            <Link href="/contact" className="flex-1 flex items-center justify-center hover:text-teal-300 transition h-full">CONTACT US</Link>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative flex min-h-[400px] items-center justify-center bg-slate-900 bg-cover bg-center px-8 py-20 text-white text-center" style={{ backgroundImage: "linear-gradient(rgba(0, 78, 140, 0.8), rgba(0, 78, 140, 0.8)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop')" }}>
-          <div className="z-10 max-w-4xl flex flex-col items-center">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1 text-sm backdrop-blur-sm">
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-[#004e8c]"><MdWorkspacePremium size={14} /></span>
-              Lita Finemesh Industries Sdn. Bhd.
-            </div>
-            <h1 className="mb-4 text-5xl font-black uppercase leading-tight md:text-7xl">
-              ABOUT US
-            </h1>
-            <p className="max-w-2xl text-lg text-slate-200">
-              Safeguarding territories, Protecting What Matters.
-            </p>
-          </div>
-        </section>
+        <HeroSectionShell
+          sectionClassName="h-[507px] min-h-[507px]"
+          backgroundImage="linear-gradient(rgba(10, 77, 124, 0.82), rgba(10, 77, 124, 0.82)), url('https://images.unsplash.com/photo-1581092918484-831bc410fe84?q=80&w=2070&auto=format&fit=crop')"
+        >
+          <HeroBrandRow />
+          <h1 className="font-moderniz mb-6 text-[70px] font-normal uppercase leading-[1.05] tracking-tight text-white">
+            About Us
+          </h1>
+          <p className="max-w-lg text-base leading-relaxed text-white/90 md:text-lg">
+            Safeguarding territories. Protecting What Matters.
+          </p>
+        </HeroSectionShell>
 
         {/* A Decade of Engineering Excellence */}
-        <section className="px-8 py-20">
-          <div className="mx-auto max-w-6xl flex flex-col md:flex-row gap-16 items-center">
-            <div className="md:w-1/2 text-left">
+        <section className="py-20 pl-[65px] pr-[85px]">
+          <div className="flex w-full flex-col items-center gap-16 md:flex-row md:items-center md:justify-between">
+            <div className="min-w-0 flex-1 text-left">
               <div className="mb-4 text-xs font-bold tracking-widest text-teal-500 uppercase">Our Story</div>
-              <h2 className="mb-8 text-4xl font-black uppercase text-[#004e8c] leading-tight">
-                A DECADE OF<br />ENGINEERING EXCELLENCE
+              <h2 className="font-moderniz mb-8 text-[40px] font-normal uppercase leading-tight text-[#004e8c]">
+                A DECADE OF
+                <br />
+                <span className="whitespace-nowrap">ENGINEERING EXCELLENCE</span>
               </h2>
-              <div className="space-y-4 text-slate-600 mb-8 border-l-4 border-teal-500 pl-6">
+              <div className="relative mb-8 space-y-4 pl-6 text-slate-600">
+                <span
+                  className="absolute bottom-[-20px] left-0 top-0 w-1 bg-[#00365A]"
+                  aria-hidden
+                />
                 <p>
-                  Founded a decade ago, Lita Finemesh has grown into a leading manufacturer of fencing profiles, known for our commitment to quality, innovative production, and continuous excellence.
+                  Founded in 2012 in Sungai Petani, Kedah, Lita Finemesh has grown into a leading
+                  <br />
+                  manufacturer of fencing profiles. As an affiliate of Yetta Steel Industries, we deliver
+                  <br />
+                  cost-effective production and on-time service nationwide.
                 </p>
-                <p className="font-bold text-[#004e8c]">
-                  We are also Malaysia's first fencing manufacturer with in-house polyester powder coating.
-                </p>
-                <p className="text-sm">
-                  This gives us full control over product finishing, ensuring top-notch quality and faster turnaround times.
+                <p>
+                  <span className="font-mona block text-[20px] font-bold leading-snug text-slate-600">
+                    We are also Malaysia&apos;s first fencing manufacturer with in-house polyester powder coating
+                  </span>
+                  <span className="mt-4 flex w-full items-center gap-[27px]">
+                    <span
+                      className="h-[2.5px] w-[41px] shrink-0 bg-[#41484B]"
+                      aria-hidden
+                    />
+                    offering complete quality control and direct factory turnaround under one roof.
+                  </span>
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-2">
-                <span className="inline-flex items-center gap-1.5 rounded-md bg-teal-50 px-3 py-1 text-xs font-semibold text-teal-700 border border-teal-100">
-                  <MdCheckCircle size={14} /> In-house Facility
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-md bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700 border border-blue-100">
-                  <MdCheckCircle size={14} /> R&amp;D Support
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-md bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700 border border-slate-200">
-                  CIDB
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-md bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700 border border-slate-200">
-                  ISO 9001:2015
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-md bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700 border border-slate-200">
-                  SIRIM QAS
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-md bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700 border border-slate-200">
-                  Quality Assurance
-                </span>
-                <span className="inline-flex items-center gap-1.5 rounded-md bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700 border border-slate-200">
-                  Eco Sustainability
-                </span>
+              <div className="min-w-0 max-w-full pr-2">
+                <p className="font-jetbrains mb-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">
+                  CORE MANUFACTURING RANGE
+                </p>
+                <div className="flex flex-col gap-2.5">
+                  <div className="flex flex-wrap gap-2 sm:flex-nowrap">
+                    <span className="inline-flex shrink-0 items-center gap-2 rounded-md border border-[#006B5F] bg-[#E6F4F1] px-4 py-2.5 font-jetbrains text-[13px] font-semibold text-[#006B5F]">
+                      <MdPrecisionManufacturing size={18} className="shrink-0" aria-hidden />
+                      In-House Powder Coating
+                    </span>
+                    <span className="inline-flex shrink-0 items-center rounded-md border border-[#C8D6E0] bg-[#F2F6F9] px-4 py-2.5 font-jetbrains text-[13px] font-semibold text-[#00365A]">
+                      Roll Top Fence
+                    </span>
+                    <span className="inline-flex shrink-0 items-center rounded-md border border-[#C8D6E0] bg-[#F2F6F9] px-4 py-2.5 font-jetbrains text-[13px] font-semibold text-[#00365A]">
+                      V-Fence
+                    </span>
+                  </div>
+                  <div className="-mr-2 flex max-w-full flex-nowrap gap-2 overflow-x-auto pb-0.5 sm:mr-0 lg:overflow-visible">
+                    <span className="inline-flex shrink-0 items-center rounded-md border border-[#C8D6E0] bg-[#F2F6F9] px-3 py-2 font-jetbrains text-[12px] font-semibold text-[#00365A] sm:px-4 sm:py-2.5 sm:text-[13px]">
+                      Flat Fence
+                    </span>
+                    <span className="inline-flex shrink-0 items-center rounded-md border border-[#006B5F] bg-[#F2F6F9] px-3 py-2 font-jetbrains text-[12px] font-semibold text-[#006B5F] sm:px-4 sm:py-2.5 sm:text-[13px]">
+                      358 Anti-Climb
+                    </span>
+                    <span className="inline-flex shrink-0 items-center rounded-md border border-[#C8D6E0] bg-[#F2F6F9] px-3 py-2 font-jetbrains text-[12px] font-semibold text-[#00365A] sm:px-4 sm:py-2.5 sm:text-[13px]">
+                      Security Netting
+                    </span>
+                    <span className="inline-flex shrink-0 items-center rounded-md border border-[#C8D6E0] bg-[#F2F6F9] px-3 py-2 font-jetbrains text-[12px] font-semibold text-[#00365A] sm:px-4 sm:py-2.5 sm:text-[13px]">
+                      Gabions
+                    </span>
+                    <span className="inline-flex shrink-0 items-center rounded-md border border-[#C8D6E0] bg-[#F2F6F9] px-3 py-2 font-jetbrains text-[12px] font-semibold text-[#00365A] sm:px-4 sm:py-2.5 sm:text-[13px]">
+                      Wire Accessories
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="md:w-1/2 flex justify-center">
+            <div className="flex shrink-0 justify-center md:justify-end">
               <div className="relative h-80 w-80 md:h-[450px] md:w-[450px] rounded-full overflow-hidden border-8 border-slate-50 shadow-xl">
                 <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop" alt="Engineering Excellence" className="h-full w-full object-cover" />
               </div>
@@ -211,48 +230,7 @@ export default function About() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-[#003b6b] px-8 py-16 text-slate-300 text-sm">
-        <div className="mx-auto max-w-6xl grid gap-12 md:grid-cols-4">
-          <div className="md:col-span-1">
-            <div className="text-2xl font-bold text-white mb-6">
-              <span className="text-teal-500">Lita</span> Finemesh
-            </div>
-            <p className="mb-4">123 Industrial Park, Block B<br />Selangor, Malaysia</p>
-            <p className="mb-1"><strong>Phone:</strong> +60 123 456 789</p>
-            <p><strong>Email:</strong> info@litacoating.com</p>
-          </div>
-          <div>
-            <h4 className="mb-6 font-bold text-white">QUICK LINKS</h4>
-            <ul className="space-y-3">
-              <li><Link href="/" className="hover:text-teal-400">Home</Link></li>
-              <li><Link href="/about" className="hover:text-teal-400">About Us</Link></li>
-              <li><Link href="/service" className="hover:text-teal-400">Services</Link></li>
-              <li><Link href="/contact" className="hover:text-teal-400">Contact</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="mb-6 font-bold text-white">SERVICES</h4>
-            <ul className="space-y-3">
-              <li><Link href="/service" className="hover:text-teal-400">Powder Coating</Link></li>
-              <li><Link href="#" className="hover:text-teal-400">Sand Blasting</Link></li>
-              <li><Link href="#" className="hover:text-teal-400">Surface Preparation</Link></li>
-              <li><Link href="#" className="hover:text-teal-400">Quality Inspection</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="mb-6 font-bold text-white">NEWSLETTER</h4>
-            <p className="mb-4">Subscribe to our newsletter for updates.</p>
-            <div className="flex">
-              <input type="email" placeholder="Your email" className="w-full bg-[#002a4d] px-4 py-2 outline-none text-white rounded-l-md" />
-              <button className="bg-teal-500 px-4 py-2 font-bold text-white hover:bg-teal-600 rounded-r-md">JOIN</button>
-            </div>
-          </div>
-        </div>
-        <div className="mx-auto max-w-6xl mt-12 border-t border-[#004e8c] pt-8 text-center text-xs">
-          <p>&copy; {new Date().getFullYear()} Lita Finemesh Industries Sdn Bhd. All rights reserved.</p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
