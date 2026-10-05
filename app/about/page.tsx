@@ -37,7 +37,7 @@ export default function About() {
           <div className="flex w-full flex-col items-center gap-16 md:flex-row md:items-center md:justify-between">
             <div className="min-w-0 flex-1 text-left">
               <div className="mb-4 text-xs font-bold tracking-widest text-teal-500 uppercase">Our Story</div>
-              <h2 className="font-moderniz mb-8 text-[40px] font-normal uppercase leading-tight text-[#004e8c]">
+              <h2 className="font-moderniz mb-8 text-[40px] font-normal uppercase leading-tight text-[#00365A]">
                 A DECADE OF
                 <br />
                 <span className="whitespace-nowrap">ENGINEERING EXCELLENCE</span>
@@ -114,27 +114,46 @@ export default function About() {
         </section>
 
         {/* Stats Section */}
-        <section className="bg-slate-50 py-16 px-8">
-          <div className="mx-auto max-w-6xl grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center md:text-left">
-              <div className="text-4xl md:text-5xl font-black text-[#004e8c] mb-2">12+</div>
-              <div className="text-sm font-bold text-teal-600 mb-1">Years in Business</div>
-              <div className="text-xs text-slate-500">Delivering excellence since 2012</div>
-            </div>
-            <div className="text-center md:text-left">
-              <div className="text-4xl md:text-5xl font-black text-[#004e8c] mb-2">8+</div>
-              <div className="text-sm font-bold text-teal-600 mb-1">Core Fencing Profiles</div>
-              <div className="text-xs text-slate-500">Comprehensive range of products</div>
-            </div>
-            <div className="text-center md:text-left">
-              <div className="text-4xl md:text-5xl font-black text-[#004e8c] mb-2">100%</div>
-              <div className="text-sm font-bold text-teal-600 mb-1">Nationwide Coverage</div>
-              <div className="text-xs text-slate-500">Full Malaysia footprint and support</div>
-            </div>
-            <div className="text-center md:text-left">
-              <div className="text-4xl md:text-5xl font-black text-[#004e8c] mb-2">1,500+</div>
-              <div className="text-sm font-bold text-teal-600 mb-1">Completed Projects</div>
-              <div className="text-xs text-slate-500">Trusted by major developers</div>
+        <section className="bg-slate-50 py-16 pl-[65px] pr-[85px]">
+          <div className="mx-auto flex h-[210px] w-[1308px] max-w-full items-center rounded-2xl bg-white px-8 md:px-10">
+            <div className="flex w-full flex-col items-center gap-10 md:flex-row md:items-center md:justify-center md:gap-[100px]">
+              {[
+                {
+                  value: "12",
+                  suffix: "+",
+                  title: "Years in Business",
+                  description: "Pioneering in Kedah since 2012",
+                },
+                {
+                  value: "8",
+                  suffix: "+",
+                  title: "Core Fencing Profiles",
+                  description: "Custom wire gauge integrations",
+                },
+                {
+                  value: "100",
+                  suffix: "%",
+                  title: "Nationwide Coverage",
+                  description: "Full on-site contractor support",
+                },
+                {
+                  value: "1,500",
+                  suffix: "+",
+                  title: "Corrosion Resistance",
+                  description: "Hours Salt-Spray test certified",
+                },
+              ].map((stat, index) => (
+                <div key={stat.title} className="min-w-0 shrink-0 text-left">
+                  <div className="mb-2 text-[44px] font-black leading-none tabular-nums md:text-[52px]">
+                    <span className="text-[#2d6a9f]">{stat.value}</span>
+                    <span className="text-[#00AB94]">{stat.suffix}</span>
+                  </div>
+                  <div className="mb-2 text-lg font-bold text-[#4a8fc7]">{stat.title}</div>
+                  <p className="font-jetbrains text-[13px] leading-snug text-slate-400">
+                    {stat.description}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -142,8 +161,12 @@ export default function About() {
         {/* Vision & Mission */}
         <section className="px-8 py-20 bg-slate-50">
           <div className="mx-auto max-w-6xl text-center">
-            <div className="mb-2 text-xs font-bold tracking-widest text-teal-500 uppercase">Guiding Principles</div>
-            <h2 className="mb-12 text-4xl font-black uppercase text-[#004e8c]">STRATEGIC VISION &amp; MISSION</h2>
+            <div className="mb-2 font-jetbrains text-[12px] font-bold tracking-widest text-teal-500 uppercase">
+              Guiding Principles
+            </div>
+            <h2 className="font-moderniz mb-12 text-[40px] font-normal uppercase leading-tight text-[#00365A]">
+              STRATEGIC VISION &amp; MISSION
+            </h2>
             
             <div className="grid md:grid-cols-2 gap-8 text-left">
               {/* Vision Card */}
@@ -184,8 +207,13 @@ export default function About() {
         {/* Case Portfolio */}
         <section className="px-8 py-20 bg-white">
           <div className="mx-auto max-w-6xl text-center">
-            <h2 className="mb-12 inline-block border-b-4 border-teal-500 pb-2 text-4xl font-black uppercase text-[#004e8c]">CASE PORTFOLIO</h2>
-            
+            <div className="mb-12">
+              <h2 className="font-moderniz mb-2 text-[40px] font-normal uppercase leading-tight text-[#00365A]">
+                CASE PORTFOLIO
+              </h2>
+              <div className="mx-auto h-1 w-[200px] bg-teal-500" aria-hidden />
+            </div>
+
             <div className="grid md:grid-cols-3 gap-6 text-left">
               <div className="md:col-span-2 group relative overflow-hidden rounded-2xl aspect-[16/9] md:aspect-auto h-[350px]">
                 <img src="https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?q=80&w=2079&auto=format&fit=crop" alt="Industrial Hub" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
@@ -206,25 +234,29 @@ export default function About() {
         </section>
 
         {/* CTA Banner */}
-        <section className="bg-[#004e8c] relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500 rounded-full opacity-20 -translate-y-1/2 translate-x-1/2"></div>
-          <div className="absolute bottom-0 right-32 w-48 h-48 bg-teal-400 rounded-full opacity-10 translate-y-1/4"></div>
-          <div className="absolute top-1/2 right-1/4 w-32 h-32 bg-blue-400 rounded-full opacity-20 -translate-y-1/2"></div>
-          
-          <div className="mx-auto max-w-6xl px-8 py-20 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="text-white text-center md:text-left">
-              <h2 className="text-3xl md:text-5xl font-black uppercase mb-4 leading-tight">
-                LOOKING FOR A RELIABLE<br />FENCING PARTNER?
-              </h2>
-              <p className="text-blue-100 text-lg">Get in touch with us today.</p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 shrink-0">
-              <button className="flex items-center justify-center gap-2 rounded-full bg-teal-500 px-8 py-3 font-bold text-white transition hover:bg-teal-600">
-                <MdPhone size={18} /> CONTACT US
-              </button>
-              <button className="flex items-center justify-center gap-2 rounded-full bg-white px-8 py-3 font-bold text-[#004e8c] transition hover:bg-slate-100">
-                <MdFileDownload size={18} /> VIEW BROCHURE
-              </button>
+        <section className="flex justify-center bg-white px-8 py-16">
+          <div className="relative mx-auto h-[377px] w-[1372px] max-w-full overflow-hidden rounded-2xl bg-[#004e8c]">
+            <div className="absolute top-0 right-0 h-64 w-64 translate-x-1/2 -translate-y-1/2 rounded-full bg-teal-500 opacity-20" />
+            <div className="absolute bottom-0 right-32 h-48 w-48 translate-y-1/4 rounded-full bg-teal-400 opacity-10" />
+            <div className="absolute top-1/2 right-1/4 h-32 w-32 -translate-y-1/2 rounded-full bg-blue-400 opacity-20" />
+
+            <div className="relative z-10 flex h-full items-center px-8 md:px-12 lg:px-16">
+              <div className="relative -left-[15px] -top-[5px] text-center text-white md:text-left">
+                <h2 className="font-moderniz mb-4 text-[40px] font-normal uppercase leading-tight text-white">
+                  <span className="whitespace-nowrap">LOOKING FOR A RELIABLE</span>
+                  <br />
+                  FENCING PARTNER?
+                </h2>
+                <p className="text-lg text-blue-100">Get in touch with us today.</p>
+                <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:justify-center md:justify-start">
+                  <button className="flex items-center justify-center gap-2 rounded-full bg-teal-500 px-8 py-3 font-bold text-white transition hover:bg-teal-600">
+                    <MdPhone size={18} /> CONTACT US
+                  </button>
+                  <button className="flex items-center justify-center gap-2 rounded-full bg-white px-8 py-3 font-bold text-[#004e8c] transition hover:bg-slate-100">
+                    <MdFileDownload size={18} /> VIEW BROCHURE
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </section>
