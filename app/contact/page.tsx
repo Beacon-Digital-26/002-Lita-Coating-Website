@@ -1,7 +1,9 @@
 import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
-import { MdWorkspacePremium, MdLocationOn, MdPhone, MdEmail, MdAccessTime, MdEdit, MdLock, MdOpenInNew } from "react-icons/md";
+import HeroBrandRow from "../components/HeroBrandRow";
+import HeroSectionShell from "../components/HeroSectionShell";
+import { MdLocationOn, MdPhone, MdEmail, MdAccessTime, MdEdit, MdLock, MdOpenInNew } from "react-icons/md";
 
 export default function Contact() {
   return (
@@ -10,20 +12,18 @@ export default function Contact() {
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative flex min-h-[400px] items-center justify-center bg-slate-900 bg-cover bg-center px-8 py-20 text-white text-center" style={{ backgroundImage: "linear-gradient(rgba(0, 78, 140, 0.8), rgba(0, 78, 140, 0.8)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop')" }}>
-          <div className="z-10 max-w-4xl flex flex-col items-center">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1 text-sm backdrop-blur-sm">
-              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white text-[#004e8c]"><MdWorkspacePremium size={14} /></span>
-              Lita Finemesh Industries Sdn. Bhd.
-            </div>
-            <h1 className="mb-4 text-5xl font-black uppercase leading-tight md:text-7xl">
-              CONTACT US
-            </h1>
-            <p className="max-w-2xl text-lg text-slate-200">
-              Connect with our team for your next fencing project.
-            </p>
-          </div>
-        </section>
+        <HeroSectionShell
+          sectionClassName="h-[507px] min-h-[507px]"
+          backgroundImage="linear-gradient(rgba(10, 77, 124, 0.82), rgba(10, 77, 124, 0.82)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop')"
+        >
+          <HeroBrandRow />
+          <h1 className="font-moderniz mb-6 text-[70px] font-normal uppercase leading-[1.05] tracking-tight text-white">
+            Contact Us
+          </h1>
+          <p className="max-w-lg text-base leading-relaxed text-white/90 md:text-lg">
+            Connect with our team for your next fencing project.
+          </p>
+        </HeroSectionShell>
 
         {/* Contact Info & Form */}
         <section className="px-8 py-20 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">

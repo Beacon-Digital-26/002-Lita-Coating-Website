@@ -1,18 +1,44 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import type { IconType } from "react-icons";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 import HeroBrandRow from "../components/HeroBrandRow";
 import HeroSectionShell from "../components/HeroSectionShell";
 import ColourSwatchFan from "../components/ColourSwatchFan";
-import { MdCheck, MdVerifiedUser } from "react-icons/md";
+import {
+  MdArrowForward,
+  MdCheck,
+  MdHandyman,
+  MdLocationOn,
+  MdPhone,
+  MdVerifiedUser,
+} from "react-icons/md";
 
 type ProtectionFeatureProps = {
   label: ReactNode;
   subtext?: string;
   subtextClassName?: string;
 };
+
+type InstallationHighlightProps = {
+  icon: IconType;
+  title: string;
+  subtitle: string;
+};
+
+function InstallationHighlight({ icon: Icon, title, subtitle }: InstallationHighlightProps) {
+  return (
+    <div className="flex flex-1 flex-col rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm">
+      <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-[#00365A] text-white">
+        <Icon size={22} aria-hidden />
+      </div>
+      <h3 className="font-mona text-[15px] font-semibold leading-snug text-[#00365A]">{title}</h3>
+      <p className="mt-1 font-mona text-xs leading-snug text-slate-500">{subtitle}</p>
+    </div>
+  );
+}
 
 function ProtectionFeature({ label, subtext, subtextClassName }: ProtectionFeatureProps) {
   return (
@@ -195,6 +221,102 @@ export default function Service() {
           </div>
         </section>
 
+        {/* One-stop Installation Service */}
+        <section className="bg-white px-8 py-16">
+          <div className="relative -left-[50px] mx-auto w-[min(1394px,calc(100vw-2rem))] max-w-full rounded-3xl bg-slate-50 px-6 py-12 sm:px-10 sm:py-14 lg:px-12 lg:py-16">
+            <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-14">
+              <div className="flex flex-col text-left lg:w-[58%] lg:shrink-0">
+                <div className="mb-5 flex items-center gap-2 font-inter text-[11px] font-bold uppercase tracking-[0.18em] text-[#00A896]">
+                  <span className="h-2 w-2 shrink-0 rounded-full bg-[#00A896]" aria-hidden />
+                  Nationwide Contracting Capability
+                </div>
+                <h2 className="font-moderniz text-[40px] font-normal leading-tight text-[#00365A]">
+                  <span className="block whitespace-nowrap">One-stop Installation</span>
+                  <span className="inline-block border-b-[5px] border-[#00365A] pb-1">Service</span>
+                </h2>
+                <div className="mt-8 space-y-5 font-mona text-[15px] leading-relaxed text-slate-600 md:text-base">
+                  <p>
+                    Lita FINEmesh also provides nationwide fencing installation service. Our staff and
+                    contractors are carefully selected, with experience in this field. We assure our
+                    customers of our installation quality, and we are committed to ensuring customer
+                    satisfaction and after-sales service.
+                  </p>
+                  <p>
+                    We have been working with many main contractors, developers, local councils, and
+                    factory owners throughout Peninsular Malaysia, regardless of whether the project is
+                    large or small. If you have special requirements, we are also ready to serve you.
+                  </p>
+                </div>
+                <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:gap-3">
+                  <InstallationHighlight
+                    icon={MdHandyman}
+                    title="Experienced Installers"
+                    subtitle="Certified CIDB & Site-Trained Crews"
+                  />
+                  <InstallationHighlight
+                    icon={MdLocationOn}
+                    title="Nationwide Coverage"
+                    subtitle="All States & Industrial Hubs"
+                  />
+                  <InstallationHighlight
+                    icon={MdVerifiedUser}
+                    title="After-sales Service"
+                    subtitle="Dedicated Maintenance & Inspections"
+                  />
+                </div>
+                <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:flex-wrap sm:items-center sm:gap-8">
+                  <Link
+                    href="/contact"
+                    className="inline-flex w-fit items-center gap-3 rounded-xl bg-[#00365A] px-6 py-3.5 font-mona text-sm font-bold text-white transition hover:bg-[#004e8c]"
+                  >
+                    Contact Us for a Quotation
+                    <MdArrowForward size={18} aria-hidden />
+                  </Link>
+                  <div className="flex items-center gap-3 text-[#00365A]">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 bg-white text-[#00365A]">
+                      <MdPhone size={20} aria-hidden />
+                    </span>
+                    <p className="font-mona text-sm text-slate-600">
+                      Direct Line:{" "}
+                      <a href="tel:+6044412888" className="font-bold text-[#00365A] hover:underline">
+                        +604-441 2888
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="relative w-full shrink-0 lg:left-[100px] lg:w-[42%]">
+                <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-2xl border border-slate-200 shadow-lg lg:mx-0 lg:ml-auto lg:max-w-none">
+                  <Image
+                    src="/service-installation.png"
+                    alt="Installer tightening hardware on green mesh fencing on site"
+                    width={1024}
+                    height={682}
+                    className="block h-auto w-full max-w-full"
+                    sizes="(max-width: 1024px) 100vw, 42vw"
+                    quality={90}
+                  />
+                  <div className="absolute inset-x-4 bottom-4 flex flex-col gap-2 rounded-xl border border-slate-100 bg-white/95 px-4 py-3 shadow-md backdrop-blur-sm sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+                    <div className="flex items-start gap-2.5 sm:min-w-0 sm:flex-1">
+                      <span
+                        className="mt-1.5 h-2.5 w-2.5 shrink-0 rounded-full bg-[#00A896]"
+                        aria-hidden
+                      />
+                      <p className="font-mona text-[11px] font-semibold leading-snug text-[#00365A] sm:text-xs">
+                        CIDB Registered Contractor / Turnkey On-Site Erection &amp; Alignment
+                      </p>
+                    </div>
+                    <div className="hidden h-8 w-px shrink-0 bg-slate-200 sm:block" aria-hidden />
+                    <p className="shrink-0 font-inter text-[10px] font-bold uppercase tracking-[0.14em] text-[#004e8c] sm:text-right">
+                      Peninsular MY
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Banner */}
         <section className="bg-[#004e8c] mx-8 my-16 rounded-3xl relative overflow-hidden max-w-6xl lg:mx-auto">
           {/* Decorative elements */}
@@ -202,12 +324,15 @@ export default function Service() {
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-teal-400 rounded-full opacity-10 translate-y-1/4 -translate-x-1/4"></div>
           
           <div className="px-8 py-16 relative z-10 flex flex-col items-center justify-center text-center">
-            <div className="text-teal-400 text-xs font-bold uppercase tracking-widest mb-4">Partner With The Best</div>
-            <h2 className="text-3xl md:text-5xl font-black uppercase mb-6 leading-tight text-white">
+            <div className="mb-4 font-inter text-[12px] font-bold uppercase tracking-widest text-[#00A896]">
+              Tender &amp; Specification Enquiry
+            </div>
+            <h2 className="font-unbounded mb-6 text-[36px] font-black uppercase leading-tight tracking-[-1px] text-white">
               LOOKING FOR A RELIABLE<br />FENCING PARTNER?
             </h2>
-            <p className="text-blue-100 text-sm max-w-2xl mb-10">
-              Get in touch with us today for a free quote or to learn more about how we can help you secure your perimeter.
+            <p className="mb-10 max-w-2xl text-sm text-blue-100">
+              Direct factory pricing, custom CAD detailing, and rapid BOQ estimation from our Sungai
+              Petani manufacturing works.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 shrink-0">
               <button className="flex items-center justify-center gap-2 rounded-full bg-teal-500 px-8 py-3 font-bold text-white transition hover:bg-teal-600">
