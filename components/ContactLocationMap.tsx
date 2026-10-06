@@ -108,7 +108,7 @@ export default function ContactLocationMap({
 
       <div
         ref={cardRef}
-        className="absolute left-4 top-1/2 z-10 w-[calc(100%-2rem)] max-w-md -translate-y-1/2 rounded-2xl border border-slate-100 bg-white p-6 shadow-2xl sm:left-8 sm:w-[calc(100%-4rem)] sm:p-8"
+        className="absolute left-4 top-1/2 z-10 w-[calc(100%-2rem)] max-w-md -translate-y-1/2 rounded-2xl border border-slate-100 bg-white p-6 shadow-xl shadow-slate-200/50 sm:left-8 sm:w-[calc(100%-4rem)] sm:p-8"
         onMouseEnter={() => {
           pointerOverCardRef.current = true;
         }}
@@ -142,7 +142,7 @@ export default function ContactLocationMap({
           href={googleMapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#004e8c] px-6 py-3 font-bold text-white transition hover:bg-[#003b6b]"
+          className="font-expanded flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-[#004e8c] px-6 py-3 font-bold text-white transition duration-200 hover:scale-[1.02] hover:bg-[#003b6b] active:scale-95"
         >
           OPEN IN GOOGLE MAPS <MdOpenInNew size={16} />
         </a>

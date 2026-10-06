@@ -1,9 +1,8 @@
-import SiteHeader from "../components/SiteHeader";
-import SiteFooter from "../components/SiteFooter";
-import HeroBrandRow from "../components/HeroBrandRow";
-import HeroSectionShell from "../components/HeroSectionShell";
-import ContactLocationMap from "../components/ContactLocationMap";
-import { MdLocationOn, MdPhone, MdEmail, MdAccessTime, MdEdit, MdLock } from "react-icons/md";
+import SiteHeader from "@/components/TopNav";
+import SiteFooter from "@/components/SiteFooter";
+import HeroSectionShell from "@/components/HeroSectionShell";
+import ContactLocationMap from "@/components/ContactLocationMap";
+import { MdAccessTime, MdArrowForward, MdEdit, MdEmail, MdLocationOn, MdLock, MdPhone } from "react-icons/md";
 
 const LITA_FINEMESH_BUSINESS = "Lita Finemesh Industries Sdn Bhd";
 
@@ -26,11 +25,9 @@ export default function Contact() {
       <main className="flex-grow">
         {/* Hero Section */}
         <HeroSectionShell
-          sectionClassName="h-[507px] min-h-[507px]"
           backgroundImage="linear-gradient(rgba(10, 77, 124, 0.82), rgba(10, 77, 124, 0.82)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop')"
         >
-          <HeroBrandRow />
-          <h1 className="font-moderniz mb-6 text-[70px] font-normal uppercase leading-[1.05] tracking-tight text-white">
+          <h1 className="font-title mb-6 text-[clamp(36px,9vw,70px)] font-bold uppercase leading-[1.05] tracking-tight text-white">
             Contact Us
           </h1>
           <p className="max-w-lg text-base leading-relaxed text-white/90 md:text-lg">
@@ -39,10 +36,10 @@ export default function Contact() {
         </HeroSectionShell>
 
         {/* Contact Info & Form */}
-        <section className="px-8 py-20 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
+        <section className="px-4 py-14 sm:px-6 md:px-8 md:py-20 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
           {/* Left Column: Info */}
           <div>
-            <h2 className="font-mona mt-[20px] mb-4 text-[30px] font-black uppercase text-[#0A4D7C]">GET IN TOUCH</h2>
+            <h2 className="font-mona mt-[20px] mb-4 text-[clamp(22px,5vw,30px)] font-black uppercase text-[#0A4D7C]">GET IN TOUCH</h2>
             <p className="text-slate-500 mb-10">Our engineering team is ready to assist you. Reach out via any of the channels below.</p>
             
             <div className="space-y-8 mb-10">
@@ -137,8 +134,8 @@ export default function Contact() {
                 <textarea rows={4} placeholder="Provide estimated linear meters, project location, or specification requirements..." className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition resize-none"></textarea>
               </div>
 
-              <button type="button" className="w-full flex items-center justify-center gap-2 rounded-lg bg-teal-500 px-6 py-4 font-bold text-white transition hover:bg-teal-600">
-                SUBMIT ENQUIRY / REQUEST TENDER QUOTE -&gt;
+              <button type="button" className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-lg bg-teal-500 px-6 py-4 font-bold text-white transition duration-200 hover:scale-[1.02] hover:bg-teal-600 active:scale-95">
+                SUBMIT ENQUIRY / REQUEST TENDER QUOTE <MdArrowForward size={18} aria-hidden />
               </button>
               
               <div className="flex items-center justify-center gap-1.5 text-xs text-slate-400 mt-4">

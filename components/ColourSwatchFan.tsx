@@ -137,7 +137,7 @@ export default function ColourSwatchFan() {
                 }}
                 data-i={i}
                 style={{ "--i": i } as CSSProperties}
-                className={`colour-swatch-card cursor-pointer overflow-hidden rounded-t-2xl border border-slate-200 shadow-xl transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${isActive ? "is-active" : ""}`}
+                className={`colour-swatch-card cursor-pointer overflow-hidden rounded-t-2xl border border-slate-100 shadow-xl shadow-slate-200/50 transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${isActive ? "is-active" : ""}`}
               >
                 <div className="flex h-full w-full flex-col bg-white">
                   <div

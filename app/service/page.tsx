@@ -2,11 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { IconType } from "react-icons";
-import SiteHeader from "../components/SiteHeader";
-import SiteFooter from "../components/SiteFooter";
-import HeroBrandRow from "../components/HeroBrandRow";
-import HeroSectionShell from "../components/HeroSectionShell";
-import ColourSwatchFan from "../components/ColourSwatchFan";
+import SiteHeader from "@/components/TopNav";
+import SiteFooter from "@/components/SiteFooter";
+import HeroSectionShell from "@/components/HeroSectionShell";
+import ColourSwatchFan from "@/components/ColourSwatchFan";
+import CallToAction from "@/components/CallToAction";
 import {
   MdArrowForward,
   MdCheck,
@@ -30,7 +30,7 @@ type InstallationHighlightProps = {
 
 function InstallationHighlight({ icon: Icon, title, subtitle }: InstallationHighlightProps) {
   return (
-    <div className="flex flex-1 flex-col rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm">
+    <div className="flex flex-1 flex-col rounded-2xl border border-slate-100 bg-white p-5 shadow-xl shadow-slate-200/50">
       <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-[#00365A] text-white">
         <Icon size={22} aria-hidden />
       </div>
@@ -68,13 +68,11 @@ export default function Service() {
       <main className="flex-grow">
         {/* Hero Section */}
         <HeroSectionShell
-          sectionClassName="h-[507px] min-h-[507px]"
           backgroundImage="linear-gradient(rgba(10, 77, 124, 0.82), rgba(10, 77, 124, 0.82)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop')"
         >
-          <HeroBrandRow />
           <div className="inline-flex w-fit max-w-full flex-col items-start">
-            <h1 className="font-moderniz mb-6 w-full text-left text-[70px] font-normal uppercase leading-[1.05] tracking-tight text-white">
-              <span className="whitespace-nowrap">Polyester Powder</span>
+            <h1 className="font-title mb-6 w-full text-left text-[clamp(36px,9vw,70px)] font-bold uppercase leading-[1.05] tracking-tight text-white">
+              Polyester Powder
               <br />
               Coating
             </h1>
@@ -85,19 +83,19 @@ export default function Service() {
         </HeroSectionShell>
 
         {/* Intro Section */}
-        <section className="px-8 py-20">
+        <section className="px-4 py-14 sm:px-6 md:px-8 md:py-20">
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-16 md:flex-row md:items-start">
             <div className="md:w-1/2 self-start text-left">
               <div className="inline-flex w-fit max-w-full flex-col items-start">
-                <div className="relative -top-[13px] mb-4 w-full text-left font-inter text-[12px] font-bold uppercase tracking-[2.16px] text-teal-500">
+                <div className="relative -top-[13px] mb-4 w-full text-left font-mona text-[12px] font-bold uppercase tracking-[2.16px] text-teal-500">
                   PRECISION SURFACE TECHNOLOGY
                 </div>
-                <h2 className="font-moderniz mb-4 w-full text-left text-[48px] font-normal uppercase leading-[51px] text-[#00365A]">
+                <h2 className="font-title mb-4 w-full text-left text-[clamp(28px,6vw,48px)] font-bold uppercase leading-tight text-[#00365A]">
                   POLYESTER
                   <br />
                   POWDER
                   <br />
-                  <span className="whitespace-nowrap">COATING FINISHING</span>
+                  COATING FINISHING
                 </h2>
                 <div className="mb-8 h-1 w-[144px] bg-[#00A896]" aria-hidden />
                 <div className="w-full space-y-6 text-left font-mona text-[20px] font-normal leading-[24px] text-slate-600">
@@ -110,8 +108,8 @@ export default function Service() {
                 </div>
               </div>
             </div>
-            <div className="relative left-[60px] top-[30px] flex justify-center md:w-1/2">
-              <div className="relative h-[370px] w-[370px] max-w-[370px] overflow-hidden rounded-2xl border-2 border-slate-300 shadow-lg">
+            <div className="flex justify-center md:relative md:left-[60px] md:top-[30px] md:w-1/2">
+              <div className="relative h-[370px] w-[370px] max-w-[370px] overflow-hidden rounded-2xl border border-slate-100 shadow-xl shadow-slate-200/50">
                 <Image
                   src="/service-polyester-coating.jpg"
                   alt="Technician powder coating green mesh fencing in the finishing plant"
@@ -141,7 +139,7 @@ export default function Service() {
             />
 
             <div className="pointer-events-none absolute inset-0 z-10">
-              <h2 className="font-moderniz absolute right-[7.96%] top-[11.7%] text-right text-[clamp(32px,3.38vw,51px)] font-normal uppercase leading-[1.14] text-[#00365A]">
+              <h2 className="font-title absolute right-[7.96%] top-[11.7%] text-right text-[clamp(32px,3.38vw,51px)] font-bold uppercase leading-[1.14] text-[#00365A]">
                 PROTECTION
                 <br />
                 THAT
@@ -178,9 +176,9 @@ export default function Service() {
         </section>
 
         {/* Colour & Finish Options */}
-        <section className="overflow-visible bg-white px-8 py-24">
+        <section className="overflow-visible bg-white px-4 py-16 sm:px-6 md:px-8 md:py-24">
           <div className="mx-auto w-full text-center">
-            <h2 className="font-moderniz mb-4 mt-[50px] text-[40px] font-normal uppercase text-[#00365A]">
+            <h2 className="font-title mb-4 mt-[50px] text-[clamp(26px,6vw,40px)] font-bold uppercase text-[#00365A]">
               COLOUR &amp; FINISH OPTIONS
             </h2>
             <p className="mb-16 text-slate-500 text-sm">
@@ -189,49 +187,50 @@ export default function Service() {
 
             <ColourSwatchFan />
 
-            <button className="rounded-full bg-teal-500 px-8 py-3 font-bold text-white transition hover:bg-teal-600 shadow-lg">
+            <button className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-teal-500 px-8 py-3 font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95 shadow-lg">
               CUSTOMIZATIONS
+              <MdArrowForward size={18} aria-hidden />
             </button>
           </div>
         </section>
 
         {/* Warranty Section */}
-        <section className="px-8 py-16 bg-slate-50">
-          <div className="mx-auto flex h-[286px] w-[1294px] max-w-full flex-row items-center gap-8 rounded-3xl border border-slate-200 bg-white px-10 shadow-sm text-left">
-            <div className="relative left-[85px] flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-4 border-[#004e8c] text-[#004e8c]">
-              <MdVerifiedUser size={48} />
+        <section className="px-4 py-14 sm:px-6 md:px-8 md:py-16 bg-slate-50">
+          <div className="mx-auto flex w-full max-w-[1294px] flex-col items-center gap-6 rounded-3xl border border-slate-100 bg-white px-6 py-8 text-center shadow-xl shadow-slate-200/50 sm:px-8 md:h-[286px] md:flex-row md:gap-8 md:px-10 md:py-0 md:text-left">
+            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full border-4 border-[#004e8c] text-[#004e8c] md:relative md:left-[85px] md:h-24 md:w-24">
+              <MdVerifiedUser size={40} />
             </div>
-            <div className="relative left-[110px] flex-grow">
-              <h2 className="font-moderniz mb-2 text-[48px] font-normal uppercase leading-[50px] text-[#004e8c]">
-                <span className="whitespace-nowrap">1-2 YEAR PROCESS</span>
+            <div className="flex-grow md:relative md:left-[110px]">
+              <h2 className="font-title mb-2 text-[clamp(24px,6vw,48px)] font-bold uppercase leading-tight text-[#004e8c]">
+                1-2 YEAR PROCESS
                 <br />
                 WARRANTY
               </h2>
               <p className="text-slate-500 text-sm">
                 Our powder coating process is covered by a warranty of 1 to 2 years, depending on the
-                <br />
                 type of powder material used.
               </p>
             </div>
-            <div className="flex-shrink-0">
-              <button className="rounded-full border-2 border-slate-300 bg-white px-6 py-2 text-xs font-bold text-slate-600 transition hover:border-slate-400 hover:bg-slate-100">
+            <div className="shrink-0">
+              <button className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full border-2 border-slate-300 bg-white px-6 py-2 text-xs font-bold text-slate-600 transition duration-200 hover:scale-105 hover:border-slate-400 hover:bg-slate-100 active:scale-95">
                 REQUEST CERTIFICATE
+                <MdArrowForward size={16} aria-hidden />
               </button>
             </div>
           </div>
         </section>
 
         {/* One-stop Installation Service */}
-        <section className="bg-white px-8 py-16">
-          <div className="relative -left-[50px] mx-auto w-[min(1394px,calc(100vw-2rem))] max-w-full rounded-3xl bg-slate-50 px-6 py-12 sm:px-10 sm:py-14 lg:px-12 lg:py-16">
+        <section className="bg-white px-4 py-14 sm:px-6 md:px-8 md:py-16">
+          <div className="relative mx-auto w-[min(1394px,calc(100vw-2rem))] max-w-full rounded-3xl bg-slate-50 px-6 py-12 sm:px-10 sm:py-14 lg:left-[-50px] lg:px-12 lg:py-16">
             <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-14">
               <div className="flex flex-col text-left lg:w-[58%] lg:shrink-0">
-                <div className="mb-5 flex items-center gap-2 font-inter text-[11px] font-bold uppercase tracking-[0.18em] text-[#00A896]">
+                <div className="mb-5 flex items-center gap-2 font-mona text-[11px] font-bold uppercase tracking-[0.18em] text-[#00A896]">
                   <span className="h-2 w-2 shrink-0 rounded-full bg-[#00A896]" aria-hidden />
                   Nationwide Contracting Capability
                 </div>
-                <h2 className="font-moderniz text-[40px] font-normal leading-tight text-[#00365A]">
-                  <span className="block whitespace-nowrap">One-stop Installation</span>
+                <h2 className="font-title text-[clamp(26px,6vw,40px)] font-bold leading-tight text-[#00365A]">
+                  <span className="block">One-stop Installation</span>
                   <span className="inline-block border-b-[5px] border-[#00365A] pb-1">Service</span>
                 </h2>
                 <div className="mt-8 space-y-5 font-mona text-[15px] leading-relaxed text-slate-600 md:text-base">
@@ -267,7 +266,7 @@ export default function Service() {
                 <div className="mt-10 flex flex-col gap-6 sm:flex-row sm:flex-wrap sm:items-center sm:gap-8">
                   <Link
                     href="/contact"
-                    className="inline-flex w-fit items-center gap-3 rounded-xl bg-[#00365A] px-6 py-3.5 font-mona text-sm font-bold text-white transition hover:bg-[#004e8c]"
+                    className="font-expanded inline-flex w-fit items-center gap-3 rounded-xl bg-[#00365A] px-6 py-3.5 font-mona text-sm font-bold text-white transition duration-200 hover:scale-105 hover:bg-[#004e8c] active:scale-95"
                   >
                     Contact Us for a Quotation
                     <MdArrowForward size={18} aria-hidden />
@@ -286,7 +285,7 @@ export default function Service() {
                 </div>
               </div>
               <div className="relative w-full shrink-0 lg:left-[100px] lg:w-[42%]">
-                <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-2xl border border-slate-200 shadow-lg lg:mx-0 lg:ml-auto lg:max-w-none">
+                <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-2xl border border-slate-100 shadow-xl shadow-slate-200/50 lg:mx-0 lg:ml-auto lg:max-w-none">
                   <Image
                     src="/service-installation.png"
                     alt="Installer tightening hardware on green mesh fencing on site"
@@ -307,7 +306,7 @@ export default function Service() {
                       </p>
                     </div>
                     <div className="hidden h-8 w-px shrink-0 bg-slate-200 sm:block" aria-hidden />
-                    <p className="shrink-0 font-inter text-[10px] font-bold uppercase tracking-[0.14em] text-[#004e8c] sm:text-right">
+                    <p className="shrink-0 font-mona text-[10px] font-bold uppercase tracking-[0.14em] text-[#004e8c] sm:text-right">
                       Peninsular MY
                     </p>
                   </div>
@@ -317,33 +316,7 @@ export default function Service() {
           </div>
         </section>
 
-        {/* CTA Banner */}
-        <section className="bg-[#004e8c] mx-8 my-16 rounded-3xl relative overflow-hidden max-w-6xl lg:mx-auto">
-          {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500 rounded-full opacity-20 -translate-y-1/2 translate-x-1/2"></div>
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-teal-400 rounded-full opacity-10 translate-y-1/4 -translate-x-1/4"></div>
-          
-          <div className="px-8 py-16 relative z-10 flex flex-col items-center justify-center text-center">
-            <div className="mb-4 font-inter text-[12px] font-bold uppercase tracking-widest text-[#00A896]">
-              Tender &amp; Specification Enquiry
-            </div>
-            <h2 className="font-unbounded mb-6 text-[36px] font-black uppercase leading-tight tracking-[-1px] text-white">
-              LOOKING FOR A RELIABLE<br />FENCING PARTNER?
-            </h2>
-            <p className="mb-10 max-w-2xl text-sm text-blue-100">
-              Direct factory pricing, custom CAD detailing, and rapid BOQ estimation from our Sungai
-              Petani manufacturing works.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 shrink-0">
-              <button className="flex items-center justify-center gap-2 rounded-full bg-teal-500 px-8 py-3 font-bold text-white transition hover:bg-teal-600">
-                REQUEST A QUOTE
-              </button>
-              <button className="flex items-center justify-center gap-2 rounded-full border-2 border-white/30 bg-transparent px-8 py-3 font-bold text-white transition hover:bg-white/10 hover:border-white">
-                CONTACT US
-              </button>
-            </div>
-          </div>
-        </section>
+        <CallToAction />
       </main>
 
       <SiteFooter />
