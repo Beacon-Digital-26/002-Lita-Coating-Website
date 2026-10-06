@@ -29,7 +29,8 @@ export default function SiteFooter() {
             alt="Lita Finemesh — Fencing Your Property"
             width={280}
             height={72}
-            className="mb-6 h-auto w-[min(280px,100%)] object-contain object-left mix-blend-screen"
+            className="mb-6 max-w-[280px] object-contain object-left mix-blend-screen"
+            style={{ width: "100%", height: "auto" }}
           />
           <p className="mb-10 max-w-md leading-relaxed text-slate-400">
             High-specification industrial wire mesh and

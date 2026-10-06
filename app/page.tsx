@@ -24,7 +24,8 @@ export default function Home() {
       <main className="flex-grow">
         {/* Hero Section */}
         <HeroSectionShell
-          backgroundImage="linear-gradient(90deg, rgba(0, 54, 90, 0.93) 0%, rgba(0, 54, 90, 0.82) 45%, rgba(0, 54, 90, 0.55) 100%), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop')"
+          backgroundImage="url('/lita-finemesh-hero.png')"
+          backgroundPosition="center 22%"
         >
           <HeroBrandRow />
           <h1 className="font-moderniz mb-6 text-[42px] font-normal uppercase leading-[1.05] tracking-tight text-white md:text-6xl lg:text-7xl">

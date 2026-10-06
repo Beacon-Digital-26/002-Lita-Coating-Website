@@ -4,6 +4,7 @@ import "@fontsource/mona-sans/300.css";
 import "@fontsource/mona-sans/400.css";
 import "@fontsource/mona-sans/600.css";
 import "@fontsource/mona-sans/700.css";
+import "@fontsource/mona-sans/900.css";
 import "./globals.css";
 
 const geistSans = Geist({

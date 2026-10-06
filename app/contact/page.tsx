@@ -1,9 +1,22 @@
-import Link from "next/link";
 import SiteHeader from "../components/SiteHeader";
 import SiteFooter from "../components/SiteFooter";
 import HeroBrandRow from "../components/HeroBrandRow";
 import HeroSectionShell from "../components/HeroSectionShell";
-import { MdLocationOn, MdPhone, MdEmail, MdAccessTime, MdEdit, MdLock, MdOpenInNew } from "react-icons/md";
+import ContactLocationMap from "../components/ContactLocationMap";
+import { MdLocationOn, MdPhone, MdEmail, MdAccessTime, MdEdit, MdLock } from "react-icons/md";
+
+const LITA_FINEMESH_BUSINESS = "Lita Finemesh Industries Sdn Bhd";
+
+const OFFICE_MAP_ADDRESS =
+  "Lot 111, Jalan PKNK 2, LPK1, 08000 Sungai Petani, Kedah Darul Aman";
+
+const GOOGLE_MAPS_QUERY = `${LITA_FINEMESH_BUSINESS}, ${OFFICE_MAP_ADDRESS}`;
+
+/** Plant coordinates — embed uses this so Google does not show the place info card. */
+const LITA_FINEMESH_MAP_CENTER = "5.650312,100.534129";
+
+/** Resolves to the Lita Finemesh Google Business listing, not a generic address pin. */
+const GOOGLE_MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(GOOGLE_MAPS_QUERY)}`;
 
 export default function Contact() {
   return (
@@ -29,7 +42,7 @@ export default function Contact() {
         <section className="px-8 py-20 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
           {/* Left Column: Info */}
           <div>
-            <h2 className="text-3xl font-black uppercase text-[#004e8c] mb-4">GET IN TOUCH</h2>
+            <h2 className="font-mona mt-[20px] mb-4 text-[30px] font-black uppercase text-[#0A4D7C]">GET IN TOUCH</h2>
             <p className="text-slate-500 mb-10">Our engineering team is ready to assist you. Reach out via any of the channels below.</p>
             
             <div className="space-y-8 mb-10">
@@ -77,7 +90,14 @@ export default function Contact() {
               <div className="text-slate-400 mt-1"><MdAccessTime size={20} /></div>
               <div>
                 <h4 className="text-xs font-bold text-slate-700 uppercase mb-1">BUSINESS OPERATING HOURS</h4>
-                <p className="text-xs text-slate-500">Monday - Friday: 8:30 AM - 5:30 PM | Saturday: 8:30 AM - 1:00 PM</p>
+                <div className="grid grid-cols-[auto_auto_1fr] gap-x-1 text-xs text-slate-500">
+                  <span>Monday - Friday</span>
+                  <span>:</span>
+                  <span>8:30 AM - 5:30 PM</span>
+                  <span>Saturday</span>
+                  <span>:</span>
+                  <span>8:30 AM - 1:00 PM</span>
+                </div>
               </div>
             </div>
           </div>
@@ -129,52 +149,12 @@ export default function Contact() {
           </div>
         </section>
 
-        {/* Map Section */}
-        <section className="relative h-[600px] w-full bg-slate-200 flex items-center">
-          {/* Placeholder for map background, visually similar to a light map */}
-          <div className="absolute inset-0 overflow-hidden opacity-50" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'100%25\' height=\'100%25\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cdefs%3E%3Cpattern id=\'grid\' width=\'40\' height=\'40\' patternUnits=\'userSpaceOnUse\'%3E%3Cpath d=\'M 40 0 L 0 0 0 40\' fill=\'none\' stroke=\'%23cbd5e1\' stroke-width=\'1\'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width=\'100%25\' height=\'100%25\' fill=\'url(%23grid)\' /%3E%3C/svg%3E")' }}></div>
-          
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-8 flex justify-start">
-            <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md border border-slate-100">
-              <div className="flex items-center gap-2 text-teal-600 text-xs font-bold uppercase tracking-wider mb-2">
-                <div className="w-2 h-2 rounded-full bg-teal-500"></div>
-                OUR LOCATION
-              </div>
-              <h3 className="text-xl font-bold text-[#004e8c] mb-2">Kawasan Perusahaan Sg. Petani</h3>
-              <p className="text-sm text-slate-500 mb-6">Lot 111, Jalan PKNK 2, LPK1, 08000 Sungai Petani, Kedah Darul Aman</p>
-
-              <div className="space-y-3 mb-8 text-sm text-slate-600">
-                <div className="flex items-center gap-3">
-                  <MdPhone size={16} className="text-teal-500" />
-                  <span>+604 4426 442 (HQ)</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MdEmail size={16} className="text-teal-500" />
-                  <span>enquiry@litafinemesh.com</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MdAccessTime size={16} className="text-teal-500" />
-                  <span>Mon-Fri: 8:30am - 5:30pm</span>
-                </div>
-              </div>
-
-              <button className="w-full flex items-center justify-center gap-2 rounded-lg bg-[#004e8c] px-6 py-3 font-bold text-white transition hover:bg-[#003b6b]">
-                OPEN IN GOOGLE MAPS <MdOpenInNew size={16} />
-              </button>
-            </div>
-          </div>
-
-          {/* Map Pin UI element for visual effect */}
-          <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:flex flex-col items-center">
-            <div className="bg-[#004e8c] text-white text-xs font-bold px-3 py-1 rounded shadow-md mb-2 relative">
-              LITA FINEMESH PLANT (LPK1)
-              <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-[#004e8c] rotate-45"></div>
-            </div>
-            <div className="w-10 h-10 bg-teal-500 rounded-full flex items-center justify-center text-white shadow-lg border-2 border-white">
-              <MdLocationOn size={20} />
-            </div>
-          </div>
-        </section>
+        <ContactLocationMap
+          businessName={LITA_FINEMESH_BUSINESS}
+          address={OFFICE_MAP_ADDRESS}
+          googleMapsUrl={GOOGLE_MAPS_URL}
+          mapCenter={LITA_FINEMESH_MAP_CENTER}
+        />
       </main>
 
       <SiteFooter />
