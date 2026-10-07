@@ -3,6 +3,7 @@ import Link from "next/link";
 import SiteHeader from "@/components/TopNav";
 import SiteFooter from "@/components/SiteFooter";
 import AnimatedStatNumber from "@/components/AnimatedStatNumber";
+import ImageCard from "@/components/ImageCard";
 import {
   MdWorkspacePremium,
   MdArrowForward,
@@ -94,7 +95,7 @@ export default function Home() {
                 <h3 className="font-title mb-4 text-[16px] font-bold uppercase leading-snug text-[#0a3d6b]">
                   Full Quality Control
                 </h3>
-                <p className="text-m leading-relaxed text-slate-700">
+                <p className="font-mona text-[20px] font-normal leading-[24px] text-slate-600">
                   Zero third-party transit delays or finish variances. Complete end-to-end oversight conducted under one roof.
                 </p>
               </div>
@@ -105,7 +106,7 @@ export default function Home() {
                 <h3 className="font-title mb-4 text-[16px] font-bold uppercase leading-snug text-[#0a3d6b]">
                   Weather Resistance
                 </h3>
-                <p className="text-m leading-relaxed text-slate-700">
+                <p className="font-mona text-[20px] font-normal leading-[24px] text-slate-600">
                   Specially engineered to resist intense UV exposure, monsoon moisture, and coastal corrosion.
                 </p>
               </div>
@@ -116,7 +117,7 @@ export default function Home() {
                 <h3 className="font-title mb-4 text-[16px] font-bold uppercase leading-snug text-[#0a3d6b]">
                   Architectural Finishes
                 </h3>
-                <p className="text-m leading-relaxed text-slate-700">
+                <p className="font-mona text-[20px] font-normal leading-[24px] text-slate-600">
                   High-precision automated electrostatic application across all RAL classic palettes, architect textures, and bespoke project specifications.
                 </p>
               </div>
@@ -133,24 +134,27 @@ export default function Home() {
               aria-hidden
             />
             <div className="grid gap-6 md:grid-cols-3 mb-10">
-              <div className="group relative overflow-hidden rounded-2xl">
-                <img src="https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?q=80&w=800&auto=format&fit=crop" alt="Fencing" className="h-64 w-full object-cover transition duration-500 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
-                  <h3 className="font-title text-[clamp(20px,3vw,28px)] font-bold uppercase text-white">Fencing</h3>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-2xl">
-                <img src="https://images.unsplash.com/photo-1616423640778-28d1b53229bd?q=80&w=800&auto=format&fit=crop" alt="Pipe Valves" className="h-64 w-full object-cover transition duration-500 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
-                  <h3 className="font-title text-[clamp(20px,3vw,28px)] font-bold uppercase text-white">Pipe Valves</h3>
-                </div>
-              </div>
-              <div className="group relative overflow-hidden rounded-2xl">
-                <img src="https://images.unsplash.com/photo-1534224039826-c7a0eda0e6b3?q=80&w=800&auto=format&fit=crop" alt="Aluminium Profile" className="h-64 w-full object-cover transition duration-500 group-hover:scale-110" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
-                  <h3 className="font-title text-[clamp(20px,3vw,28px)] font-bold uppercase text-white">Aluminium Profile</h3>
-                </div>
-              </div>
+              <ImageCard
+                src="https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?q=80&w=800&auto=format&fit=crop"
+                alt="Fencing"
+                title="Fencing"
+                className="h-64 rounded-2xl"
+                contentClassName="px-6 pt-6 pb-0 sm:px-8 sm:pt-8 sm:pb-0"
+              />
+              <ImageCard
+                src="https://images.unsplash.com/photo-1616423640778-28d1b53229bd?q=80&w=800&auto=format&fit=crop"
+                alt="Pipe valves"
+                title="Pipe Valves"
+                className="h-64 rounded-2xl"
+                contentClassName="px-6 pt-6 pb-0 sm:px-8 sm:pt-8 sm:pb-0"
+              />
+              <ImageCard
+                src="https://images.unsplash.com/photo-1534224039826-c7a0eda0e6b3?q=80&w=800&auto=format&fit=crop"
+                alt="Aluminium profile"
+                title="Aluminium Profile"
+                className="h-64 rounded-2xl"
+                contentClassName="px-6 pt-6 pb-0 sm:px-8 sm:pt-8 sm:pb-0"
+              />
             </div>
             <button className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-teal-500 px-8 py-2 font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95">
               VIEW MORE
@@ -168,7 +172,7 @@ export default function Home() {
                 <br />
                 Finish Options
               </h2>
-              <p className="mx-auto max-w-xs text-center text-sm leading-relaxed text-slate-500 lg:mx-0 lg:text-left">
+              <p className="mx-auto max-w-xs text-center font-mona text-[20px] font-normal leading-[24px] text-slate-600 lg:mx-0 lg:text-left">
                 Wide range of RAL colors &amp; custom finishes available.
               </p>
             </div>
@@ -245,7 +249,7 @@ export default function Home() {
                 <span className="block">Built To Last.</span>
                 <span className="block">Coated To Perfection.</span>
               </h2>
-              <p className="mb-10 max-w-xl text-[16px] leading-relaxed text-white/90">
+              <p className="mb-10 max-w-xl font-mona text-[20px] font-normal leading-[24px] text-white/90">
                 Since 2012, Lita Finemesh has built Malaysia&apos;s fencing industry from Sungai Petani, Kedah.
                 As the first fencing fabricator with an in-house powder coating line, we deliver superior
                 finishes, faster turnaround, and consistent quality – backed by our affiliation with Yetta

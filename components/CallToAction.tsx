@@ -24,7 +24,9 @@ export default function CallToAction() {
               <br />
               FENCING PARTNER?
             </h2>
-            <p className="text-base text-blue-100 sm:text-lg">Get in touch with us today.</p>
+            <p className="font-mona text-[20px] font-normal leading-[24px] text-blue-100">
+              Get in touch with us today.
+            </p>
             <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:justify-center md:justify-start">
               <button className="flex cursor-pointer items-center justify-center gap-2 rounded-full bg-teal-500 px-8 py-3 font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95">
                 CONTACT US <MdArrowForward size={18} aria-hidden />

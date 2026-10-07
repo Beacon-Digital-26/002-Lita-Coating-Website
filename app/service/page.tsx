@@ -72,9 +72,7 @@ export default function Service() {
         >
           <div className="inline-flex w-fit max-w-full flex-col items-start">
             <h1 className="font-title mb-6 w-full text-left text-[clamp(36px,9vw,70px)] font-bold uppercase leading-[1.05] tracking-tight text-white">
-              Polyester Powder
-              <br />
-              Coating
+              Polyester Powder Coating
             </h1>
             <p className="w-full text-left text-base leading-relaxed text-white/90 md:text-lg">
               Connect with our team for your next fencing project.
@@ -87,15 +85,8 @@ export default function Service() {
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-16 md:flex-row md:items-start">
             <div className="md:w-1/2 self-start text-left">
               <div className="inline-flex w-fit max-w-full flex-col items-start">
-                <div className="relative -top-[13px] mb-4 w-full text-left font-mona text-[12px] font-bold uppercase tracking-[2.16px] text-teal-500">
-                  PRECISION SURFACE TECHNOLOGY
-                </div>
                 <h2 className="font-title mb-4 w-full text-left text-[clamp(28px,6vw,48px)] font-bold uppercase leading-tight text-[#00365A]">
-                  POLYESTER
-                  <br />
-                  POWDER
-                  <br />
-                  COATING FINISHING
+                  PRECISION SURFACE TECHNOLOGY
                 </h2>
                 <div className="mb-8 h-1 w-[144px] bg-[#00A896]" aria-hidden />
                 <div className="w-full space-y-6 text-left font-mona text-[20px] font-normal leading-[24px] text-slate-600">
