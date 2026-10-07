@@ -49,6 +49,7 @@ export default function ColourSwatchFan() {
             --fan-rot-step: ${FAN.rotStepDeg}deg;
           }
         }
+        /* Mobile: keep the fan's arc, but let it overflow and scroll instead of shrinking cards to fit. */
         .colour-swatch-fan-row {
           display: flex;
           align-items: flex-end;
@@ -114,6 +115,36 @@ export default function ColourSwatchFan() {
         }
         .swatch-label-strip--from-right {
           padding-left: var(--label-edge-pad);
+        }
+
+        /* Mobile: keep the arc, but let the row overflow and scroll instead of shrinking cards to fit. */
+        @media (max-width: 767px) {
+          .colour-swatch-fan-root {
+            --card-w: clamp(170px, 48vw, 220px);
+            width: 100%;
+            left: 0;
+            translate: none;
+            transform: none;
+            margin-bottom: 2rem;
+            padding-top: 1rem;
+            padding-bottom: 0;
+          }
+          .colour-swatch-fan-row {
+            justify-content: flex-start;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-snap-type: x proximity;
+            scrollbar-width: none;
+            padding-top: calc(var(--card-w) * 0.12);
+            padding-bottom: calc(var(--card-w) * 0.45);
+            padding-inline: calc(var(--card-w) * 0.5);
+          }
+          .colour-swatch-fan-row::-webkit-scrollbar {
+            display: none;
+          }
+          .colour-swatch-card {
+            scroll-snap-align: center;
+          }
         }
       `}</style>
 

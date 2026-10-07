@@ -37,8 +37,7 @@ export default function SiteFooter() {
             alt="Lita Finemesh — Fencing Your Property"
             width={280}
             height={72}
-            className="mb-6 max-w-[280px] object-contain object-left mix-blend-screen"
-            style={{ width: "100%", height: "auto" }}
+            className="mb-6 h-auto w-full max-w-[280px] object-contain object-left mix-blend-screen"
           />
           <p className="mb-6 leading-relaxed text-slate-300">
             Lot 111, Jalan PKNK 2, Kawasan Perusahaan Sg. Petani,
