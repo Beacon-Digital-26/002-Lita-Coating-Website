@@ -7,6 +7,7 @@ import SiteFooter from "@/components/SiteFooter";
 import HeroSectionShell from "@/components/HeroSectionShell";
 import ColourSwatchFan from "@/components/ColourSwatchFan";
 import CallToAction from "@/components/CallToAction";
+import Reveal from "@/components/Reveal";
 import {
   MdArrowForward,
   MdCheck,
@@ -31,7 +32,7 @@ type InstallationHighlightProps = {
 
 function InstallationHighlight({ icon: Icon, title, subtitle, actionLabel }: InstallationHighlightProps) {
   return (
-    <div className="flex flex-1 flex-col items-center rounded-2xl border border-slate-100 bg-white p-8 text-center shadow-xl shadow-slate-200/50">
+    <div className="flex h-full flex-1 flex-col items-center rounded-2xl border border-slate-100 bg-white p-8 text-center shadow-xl shadow-slate-200/50 transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:shadow-2xl hover:shadow-slate-300/60">
       <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#00A896] text-white">
         <Icon size={28} aria-hidden />
       </div>
@@ -91,7 +92,7 @@ export default function Service() {
         <section className="px-4 py-14 sm:px-6 md:px-8 md:py-20">
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-16 md:flex-row md:items-start">
             <div className="md:w-1/2 self-start text-left">
-              <div className="inline-flex w-fit max-w-full flex-col items-start">
+              <Reveal variant="left" className="inline-flex w-fit max-w-full flex-col items-start">
                 <h2 className="font-title mb-4 w-full text-left text-[clamp(28px,6vw,48px)] font-bold uppercase leading-tight text-[#00365A]">
                   PRECISION SURFACE TECHNOLOGY
                 </h2>
@@ -104,29 +105,35 @@ export default function Service() {
                     Our surface treatments are specifically formulated to withstand severe environmental standards, offering unparalleled defense against extreme weather conditions, UV rays, and corrosion. Ideal for industrial and commercial applications.
                   </p>
                 </div>
-              </div>
+              </Reveal>
             </div>
-            <div className="flex justify-center md:relative md:left-[60px] md:top-[30px] md:w-1/2">
-              <div className="relative h-[370px] w-[370px] max-w-[370px] overflow-hidden rounded-2xl border border-slate-100 shadow-xl shadow-slate-200/50">
+            <Reveal
+              variant="right"
+              delay={120}
+              className="flex justify-center md:relative md:left-[60px] md:top-[30px] md:w-1/2"
+            >
+              <div className="group relative h-[370px] w-[370px] max-w-[370px] overflow-hidden rounded-2xl border border-slate-100 shadow-xl shadow-slate-200/50 transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:shadow-2xl">
                 <Image
                   src="/service-polyester-coating.jpg"
                   alt="Technician powder coating green mesh fencing in the finishing plant"
                   width={692}
                   height={1024}
-                  className="h-full w-full object-cover object-center"
+                  className="h-full w-full object-cover object-center transition duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
                   sizes="(max-width: 768px) 100vw, 370px"
                 />
               </div>
-            </div>
+            </Reveal>
           </div>
         </section>
 
         {/* Protection That Lasts */}
         <section className="w-full bg-[#FFFFFF]">
           {/* Mobile: title appears before the background image instead of overlaid on it. */}
-          <h2 className="font-title px-4 pt-10 text-right text-[clamp(30px,8vw,40px)] font-bold uppercase leading-[1.14] text-[#00365A] sm:px-6 md:hidden">
-            PROTECTION THAT LASTS.
-          </h2>
+          <Reveal as="div" className="md:hidden">
+            <h2 className="font-title px-4 pt-10 text-right text-[clamp(30px,8vw,40px)] font-bold uppercase leading-[1.14] text-[#00365A] sm:px-6">
+              PROTECTION THAT LASTS.
+            </h2>
+          </Reveal>
 
           <div className="relative w-full bg-[#FFFFFF]">
             <div className="absolute inset-0 z-0 bg-[#FFFFFF]" aria-hidden />
@@ -143,24 +150,41 @@ export default function Service() {
 
             {/* md+ only: title stays overlaid on the background at its original position. */}
             <div className="pointer-events-none absolute inset-0 z-10">
-              <h2 className="font-title hidden text-right text-[clamp(32px,3.38vw,51px)] font-bold uppercase leading-[1.14] text-[#00365A] md:absolute md:right-[7.96%] md:top-[11.7%] md:block">
-                PROTECTION
-                <br />
-                THAT
-                <br />
-                LASTS.
-              </h2>
+              <Reveal
+                variant="right"
+                className="hidden md:absolute md:right-[7.96%] md:top-[11.7%] md:block"
+              >
+                <h2 className="font-title text-right text-[clamp(32px,3.38vw,51px)] font-bold uppercase leading-[1.14] text-[#00365A]">
+                  PROTECTION
+                  <br />
+                  THAT
+                  <br />
+                  LASTS.
+                </h2>
+              </Reveal>
 
               {/* md+ only: checklist stays overlaid on the background at its original scattered positions. */}
-              <div className="hidden md:absolute md:left-[16.05%] md:top-[48.97%] md:block">
+              <Reveal
+                variant="left"
+                delay={120}
+                className="hidden md:absolute md:left-[16.05%] md:top-[48.97%] md:block"
+              >
                 <ProtectionFeature label="WEATHERPROOF" />
-              </div>
+              </Reveal>
 
-              <div className="hidden md:absolute md:left-[5.64%] md:top-[62.39%] md:block">
+              <Reveal
+                variant="left"
+                delay={240}
+                className="hidden md:absolute md:left-[5.64%] md:top-[62.39%] md:block"
+              >
                 <ProtectionFeature label="UV RESISTANT" subtext="Non-chalking under equatorial sun" />
-              </div>
+              </Reveal>
 
-              <div className="hidden md:absolute md:left-[30.77%] md:top-[61.81%] md:block">
+              <Reveal
+                variant="left"
+                delay={360}
+                className="hidden md:absolute md:left-[30.77%] md:top-[61.81%] md:block"
+              >
                 <ProtectionFeature
                   label={
                     <>
@@ -171,29 +195,41 @@ export default function Service() {
                   }
                   subtext="Architectural grade 10-year gloss hold"
                 />
-              </div>
+              </Reveal>
 
-              <div className="hidden md:absolute md:left-[14.72%] md:top-[77.29%] md:block">
+              <Reveal
+                variant="left"
+                delay={480}
+                className="hidden md:absolute md:left-[14.72%] md:top-[77.29%] md:block"
+              >
                 <ProtectionFeature label="SCRATCH RESISTANT" />
-              </div>
+              </Reveal>
             </div>
           </div>
 
           {/* Mobile: checklist overlaps the image's lower 30%, then continues below it. */}
           <div className="relative z-20 -mt-[20vw] flex flex-col gap-6 px-4 py-10 text-left sm:px-6 md:hidden">
-            <ProtectionFeature label="WEATHERPROOF" />
-            <ProtectionFeature label="UV RESISTANT" subtext="Non-chalking under equatorial sun" />
-            <ProtectionFeature
-              label={
-                <>
-                  LONG-LASTING
-                  <br />
-                  COLOUR
-                </>
-              }
-              subtext="Architectural grade 10-year gloss hold"
-            />
-            <ProtectionFeature label="SCRATCH RESISTANT" />
+            <Reveal variant="left">
+              <ProtectionFeature label="WEATHERPROOF" />
+            </Reveal>
+            <Reveal variant="left" delay={120}>
+              <ProtectionFeature label="UV RESISTANT" subtext="Non-chalking under equatorial sun" />
+            </Reveal>
+            <Reveal variant="left" delay={240}>
+              <ProtectionFeature
+                label={
+                  <>
+                    LONG-LASTING
+                    <br />
+                    COLOUR
+                  </>
+                }
+                subtext="Architectural grade 10-year gloss hold"
+              />
+            </Reveal>
+            <Reveal variant="left" delay={360}>
+              <ProtectionFeature label="SCRATCH RESISTANT" />
+            </Reveal>
           </div>
         </section>
 
@@ -202,62 +238,80 @@ export default function Service() {
           <div className="relative mx-auto w-[min(1394px,calc(100vw-2rem))] max-w-full rounded-3xl bg-slate-50 px-6 py-12 sm:px-10 sm:py-14 lg:left-[-50px] lg:px-12 lg:py-16">
             <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-14">
               <div className="flex flex-col text-left lg:w-[58%] lg:shrink-0">
-                <h2 className="font-title mb-4 w-full text-left text-[clamp(28px,6vw,48px)] font-bold uppercase leading-tight text-[#00365A]">
-                  ONE-STOP <br />INSTALLATION SERVICE
-                </h2>
-                <div className="h-1 w-[144px] bg-[#00A896]" aria-hidden />
+                <Reveal variant="left">
+                  <h2 className="font-title mb-4 w-full text-left text-[clamp(28px,6vw,48px)] font-bold uppercase leading-tight text-[#00365A]">
+                    ONE-STOP <br />INSTALLATION SERVICE
+                  </h2>
+                  <div className="h-1 w-[144px] bg-[#00A896]" aria-hidden />
+                </Reveal>
                 <div className="mt-8 w-full space-y-6 text-left font-mona text-[20px] font-normal leading-[24px] text-slate-600">
-                  <p>
-                    Lita FINEmesh also provides nationwide fencing installation service. Our staff and
-                    contractors are carefully selected, with experience in this field. We assure our
-                    customers of our installation quality, and we are committed to ensuring customer
-                    satisfaction and after-sales service.
-                  </p>
-                  <p>
-                    We have been working with many main contractors, developers, local councils, and
-                    factory owners throughout Peninsular Malaysia, regardless of whether the project is
-                    large or small. If you have special requirements, we are also ready to serve you.
-                  </p>
+                  <Reveal delay={100}>
+                    <p>
+                      Lita FINEmesh also provides nationwide fencing installation service. Our staff and
+                      contractors are carefully selected, with experience in this field. We assure our
+                      customers of our installation quality, and we are committed to ensuring customer
+                      satisfaction and after-sales service.
+                    </p>
+                  </Reveal>
+                  <Reveal delay={180}>
+                    <p>
+                      We have been working with many main contractors, developers, local councils, and
+                      factory owners throughout Peninsular Malaysia, regardless of whether the project is
+                      large or small. If you have special requirements, we are also ready to serve you.
+                    </p>
+                  </Reveal>
                 </div>
                 <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  <InstallationHighlight
-                    icon={MdHandyman}
-                    title="Experienced Installers"
-                    subtitle="Certified CIDB & Site-Trained Crews"
-                  />
-                  <InstallationHighlight
-                    icon={MdLocationOn}
-                    title="Nationwide Coverage"
-                    subtitle="All States & Industrial Hubs"
-                  />
-                  <InstallationHighlight
-                    icon={MdVerifiedUser}
-                    title="After-sales Service"
-                    subtitle="Dedicated Maintenance & Inspections"
-                  />
-                  <InstallationHighlight
-                    icon={MdVerifiedUser}
-                    title="1-2 Year Process Warranty"
-                    subtitle="Our powder coating process is covered by a warranty of 1 to 2 years, depending on the type of powder material used."
-                    actionLabel="Request Certificate"
-                  />
+                  <Reveal className="h-full">
+                    <InstallationHighlight
+                      icon={MdHandyman}
+                      title="Experienced Installers"
+                      subtitle="Certified CIDB & Site-Trained Crews"
+                    />
+                  </Reveal>
+                  <Reveal delay={120} className="h-full">
+                    <InstallationHighlight
+                      icon={MdLocationOn}
+                      title="Nationwide Coverage"
+                      subtitle="All States & Industrial Hubs"
+                    />
+                  </Reveal>
+                  <Reveal delay={240} className="h-full">
+                    <InstallationHighlight
+                      icon={MdVerifiedUser}
+                      title="After-sales Service"
+                      subtitle="Dedicated Maintenance & Inspections"
+                    />
+                  </Reveal>
+                  <Reveal delay={360} className="h-full">
+                    <InstallationHighlight
+                      icon={MdVerifiedUser}
+                      title="1-2 Year Process Warranty"
+                      subtitle="Our powder coating process is covered by a warranty of 1 to 2 years, depending on the type of powder material used."
+                      actionLabel="Request Certificate"
+                    />
+                  </Reveal>
                 </div>
                 
               </div>
-              <div className="relative w-full shrink-0 lg:left-[100px] lg:w-[42%]">
-                <div className="relative mx-auto w-full max-w-md overflow-hidden rounded-2xl border border-slate-100 shadow-xl shadow-slate-200/50 lg:mx-0 lg:ml-auto lg:max-w-none">
+              <Reveal
+                variant="right"
+                delay={120}
+                className="relative w-full shrink-0 lg:left-[100px] lg:w-[42%]"
+              >
+                <div className="group relative mx-auto w-full max-w-md overflow-hidden rounded-2xl border border-slate-100 shadow-xl shadow-slate-200/50 transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:shadow-2xl lg:mx-0 lg:ml-auto lg:max-w-none">
                   <Image
                     src="/service-installation.png"
                     alt="Installer tightening hardware on green mesh fencing on site"
                     width={1024}
                     height={682}
-                    className="block h-auto w-full max-w-full"
+                    className="block h-auto w-full max-w-full transition duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 42vw"
                     quality={90}
                   />
                   
                 </div>
-              </div>
+              </Reveal>
             </div>
           </div>
         </section>
@@ -265,19 +319,25 @@ export default function Service() {
         {/* Colour & Finish Options */}
         <section className="overflow-visible bg-white px-4 pt-6 pb-16 sm:px-6 md:px-8 md:pt-8 md:pb-24">
           <div className="mx-auto w-full text-center">
-            <h2 className="font-title mb-4 text-[clamp(26px,6vw,40px)] font-bold uppercase text-[#00365A]">
-              COLOUR &amp; FINISH OPTIONS
-            </h2>
-            <p className="mb-16 w-full space-y-6 font-mona text-[20px] font-normal leading-[24px] text-slate-600">
-              Every product is available in a wide range of colours, including custom-made options
-            </p>
+            <Reveal>
+              <h2 className="font-title mb-4 text-[clamp(26px,6vw,40px)] font-bold uppercase text-[#00365A]">
+                COLOUR &amp; FINISH OPTIONS
+              </h2>
+              <p className="mb-16 w-full space-y-6 font-mona text-[20px] font-normal leading-[24px] text-slate-600">
+                Every product is available in a wide range of colours, including custom-made options
+              </p>
+            </Reveal>
 
-            <ColourSwatchFan />
+            <Reveal variant="zoom" delay={120}>
+              <ColourSwatchFan />
+            </Reveal>
 
-            <button className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-teal-500 px-8 py-3 font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95 shadow-lg">
-              CUSTOMIZATIONS
-              <MdArrowForward size={18} aria-hidden />
-            </button>
+            <Reveal delay={200}>
+              <button className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-teal-500 px-8 py-3 font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95 shadow-lg">
+                CUSTOMIZATIONS
+                <MdArrowForward size={18} aria-hidden />
+              </button>
+            </Reveal>
           </div>
         </section>
 

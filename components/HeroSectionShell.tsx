@@ -19,7 +19,7 @@ export default function HeroSectionShell({
       style={{ backgroundImage, backgroundPosition }}
     >
       <div className="relative z-10 mx-auto w-full max-w-7xl">
-        <div className="max-w-full text-left sm:max-w-2xl md:max-w-7xl">{children}</div>
+        <div className="animate-enter max-w-full text-left sm:max-w-2xl md:max-w-7xl">{children}</div>
       </div>
     </section>
   );

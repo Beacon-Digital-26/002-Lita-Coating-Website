@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { MdOpenInNew } from "react-icons/md";
+import Reveal from "./Reveal";
 
 type ContactLocationMapProps = {
   businessName: string;
@@ -75,33 +76,35 @@ export default function ContactLocationMap({
   return (
     <section className="px-4 pb-12 pt-6 sm:px-6 md:px-8 md:pb-16 md:pt-8" aria-label={`${businessName} map`}>
       <div className="mx-auto max-w-7xl">
-        <div
-          className="relative h-[360px] overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 shadow-xl shadow-slate-200/50 overscroll-contain sm:h-[440px] lg:h-[520px]"
-          onMouseEnter={() => {
-            pointerOverMapRef.current = true;
-            focusMap();
-          }}
-          onMouseLeave={() => {
-            pointerOverMapRef.current = false;
-          }}
-        >
-          <iframe
-            ref={iframeRef}
-            title={`${businessName} location map`}
-            src={embedUrl}
-            tabIndex={0}
-            className="absolute left-0 w-full border-0"
-            style={{
-              top: -EMBED_TOP_CLIP_PX,
-              height: `calc(100% + ${EMBED_TOP_CLIP_PX}px)`,
+        <Reveal variant="zoom">
+          <div
+            className="relative h-[360px] overflow-hidden rounded-2xl border border-slate-200 bg-slate-200 shadow-xl shadow-slate-200/50 overscroll-contain sm:h-[440px] lg:h-[520px]"
+            onMouseEnter={() => {
+              pointerOverMapRef.current = true;
+              focusMap();
             }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            onMouseEnter={focusMap}
-          />
-        </div>
-        <div className="mt-4 flex justify-end">
+            onMouseLeave={() => {
+              pointerOverMapRef.current = false;
+            }}
+          >
+            <iframe
+              ref={iframeRef}
+              title={`${businessName} location map`}
+              src={embedUrl}
+              tabIndex={0}
+              className="absolute left-0 w-full border-0"
+              style={{
+                top: -EMBED_TOP_CLIP_PX,
+                height: `calc(100% + ${EMBED_TOP_CLIP_PX}px)`,
+              }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              onMouseEnter={focusMap}
+            />
+          </div>
+        </Reveal>
+        <Reveal delay={120} className="mt-4 flex justify-end">
           <a
             href={googleMapsUrl}
             target="_blank"
@@ -110,7 +113,7 @@ export default function ContactLocationMap({
           >
             OPEN IN GOOGLE MAPS <MdOpenInNew size={16} />
           </a>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

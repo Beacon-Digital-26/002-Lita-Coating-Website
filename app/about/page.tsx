@@ -5,6 +5,7 @@ import CallToAction from "@/components/CallToAction";
 import AnimatedStatNumber from "@/components/AnimatedStatNumber";
 import ImageCard from "@/components/ImageCard";
 import PortfolioCarousel from "@/components/PortfolioCarousel";
+import Reveal from "@/components/Reveal";
 
 export default function About() {
   return (
@@ -28,7 +29,7 @@ export default function About() {
         <section className="px-4 py-14 sm:px-6 md:px-8 md:py-20">
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 md:flex-row md:items-start md:gap-16">
             <div className="self-start text-left md:w-1/2">
-              <div className="inline-flex w-full max-w-full flex-col items-start">
+              <Reveal variant="left" className="inline-flex w-full max-w-full flex-col items-start">
                 <h2 className="font-title mb-4 w-full text-left text-[clamp(28px,6vw,48px)] font-bold uppercase leading-tight text-[#00365A]">
                   Our Story
                 </h2>
@@ -44,9 +45,9 @@ export default function About() {
                     offering complete quality control and direct factory turnaround under one roof.
                   </p>
                 </div>
-              </div>
+              </Reveal>
 
-              <div className="mt-8 min-w-0">
+              <Reveal delay={150} className="mt-8 min-w-0">
                 <p className="font-mona mb-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400">
                   Core Manufacturing Range
                 </p>
@@ -76,23 +77,27 @@ export default function About() {
                     Wire Accessories
                   </span>
                 </div>
-              </div>
+              </Reveal>
             </div>
-            <div className="flex justify-center md:relative md:left-[60px] md:top-[30px] md:w-1/2">
-              <div className="relative aspect-square w-full max-w-[370px] overflow-hidden rounded-2xl border border-slate-100 shadow-xl shadow-slate-200/50">
+            <Reveal
+              variant="right"
+              delay={120}
+              className="flex justify-center md:relative md:left-[60px] md:top-[30px] md:w-1/2"
+            >
+              <div className="relative aspect-square w-full max-w-[370px] overflow-hidden rounded-2xl border border-slate-100 shadow-xl shadow-slate-200/50 transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=2070&auto=format&fit=crop"
                   alt="Lita Finemesh engineering team at work"
-                  className="h-full w-full object-cover object-center"
+                  className="h-full w-full object-cover object-center transition duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-105"
                 />
               </div>
-            </div>
+            </Reveal>
           </div>
         </section>
 
         {/* Stats Section */}
         <section className="bg-slate-50 px-4 py-12 sm:px-6 md:py-16 lg:pl-[65px] lg:pr-[85px]">
-          <div className="mx-auto flex w-full max-w-full flex-col items-center rounded-2xl border border-slate-100 bg-white px-6 py-8 shadow-xl shadow-slate-200/50 sm:px-8 md:h-[210px] md:w-[1308px] md:flex-row md:py-0 md:px-10">
+          <Reveal variant="zoom" className="mx-auto flex w-full max-w-full flex-col items-center rounded-2xl border border-slate-100 bg-white px-6 py-8 shadow-xl shadow-slate-200/50 sm:px-8 md:h-[210px] md:w-[1308px] md:flex-row md:py-0 md:px-10">
             <div className="flex w-full flex-col items-center gap-10 md:flex-row md:items-center md:justify-center md:gap-[100px]">
               {[
                 {
@@ -116,42 +121,48 @@ export default function About() {
                   title: "Corrosion Resistance",
                 },
               ].map((stat, index) => (
-                <div key={stat.title} className="min-w-0 shrink-0 text-center">
+                <Reveal key={stat.title} delay={index * 120} className="min-w-0 shrink-0 text-center">
                   <div className="mb-2 text-[clamp(32px,8vw,52px)] font-black leading-none tabular-nums text-[#00AB94]">
                     <AnimatedStatNumber value={stat.value} />{stat.suffix}
                   </div>
                   <div className="font-expanded mb-2 text-center text-lg font-bold text-[#00365A] uppercase">{stat.title}</div>
-                </div>
+                </Reveal>
               ))}
             </div>
-          </div>
+          </Reveal>
         </section>
 
         {/* Vision & Mission */}
         <section className="px-4 py-16 sm:px-6 md:px-8 bg-slate-50">
           <div className="mx-auto max-w-6xl text-center">
-            <h2 className="font-title mb-12 text-[clamp(26px,6vw,40px)] font-bold uppercase leading-tight text-[#00365A]">
-              Guiding Principles
-            </h2>
-            
+            <Reveal>
+              <h2 className="font-title mb-12 text-[clamp(26px,6vw,40px)] font-bold uppercase leading-tight text-[#00365A]">
+                Guiding Principles
+              </h2>
+            </Reveal>
+
             <div className="grid md:grid-cols-2 gap-8 text-left">
               {/* Vision Card */}
-              <ImageCard
-                src="https://images.unsplash.com/photo-1541888081691-5a02d844280b?q=80&w=2070&auto=format&fit=crop"
-                alt="Construction project representing our vision for the fencing industry"
-                title="Our Vision"
-                description="To be the world&apos;s most reliable and innovative provider in the fencing industry."
-                className="aspect-[4/3] rounded-lg shadow-lg shadow-slate-900/10"
-              />
+              <Reveal variant="left" delay={100}>
+                <ImageCard
+                  src="https://images.unsplash.com/photo-1541888081691-5a02d844280b?q=80&w=2070&auto=format&fit=crop"
+                  alt="Construction project representing our vision for the fencing industry"
+                  title="Our Vision"
+                  description="To be the world&apos;s most reliable and innovative provider in the fencing industry."
+                  className="aspect-[4/3] rounded-lg shadow-lg shadow-slate-900/10"
+                />
+              </Reveal>
 
               {/* Mission Card */}
-              <ImageCard
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
-                alt="Team collaborating to deliver customer-focused fencing solutions"
-                title="Our Mission"
-                description="To deliver total customer satisfaction through one-stop fencing solutions while building lasting value for our people and partners."
-                className="aspect-[4/3] rounded-lg shadow-lg shadow-slate-900/10"
-              />
+              <Reveal variant="right" delay={200}>
+                <ImageCard
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
+                  alt="Team collaborating to deliver customer-focused fencing solutions"
+                  title="Our Mission"
+                  description="To deliver total customer satisfaction through one-stop fencing solutions while building lasting value for our people and partners."
+                  className="aspect-[4/3] rounded-lg shadow-lg shadow-slate-900/10"
+                />
+              </Reveal>
             </div>
           </div>
         </section>
@@ -159,14 +170,16 @@ export default function About() {
         {/* Case Portfolio */}
         <section className="px-4 py-16 sm:px-6 md:px-8 bg-white">
           <div className="mx-auto max-w-6xl text-center">
-            <div className="mb-12">
+            <Reveal className="mb-12">
               <h2 className="font-title mb-2 text-[clamp(26px,6vw,40px)] font-bold uppercase leading-tight text-[#00365A]">
                 CASE PORTFOLIO
               </h2>
               <div className="mx-auto h-1 w-[200px] bg-teal-500" aria-hidden />
-            </div>
+            </Reveal>
 
-            <PortfolioCarousel />
+            <Reveal delay={120}>
+              <PortfolioCarousel />
+            </Reveal>
           </div>
         </section>
 

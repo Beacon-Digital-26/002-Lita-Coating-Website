@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaFacebookF, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import Reveal from "./Reveal";
 
 const NAV_LINKS = [
   { href: "/", label: "Home" },
@@ -22,7 +23,7 @@ const SOCIAL_LINKS = [
 function navLinkClassName(isActive: boolean) {
   return isActive
     ? "inline-block border-b-2 border-[#5eead4] pb-0.5 text-[#5eead4] transition"
-    : "text-slate-300 transition hover:text-[#5eead4]";
+    : "inline-block text-slate-300 transition duration-300 hover:translate-x-1 hover:text-[#5eead4]";
 }
 
 export default function SiteFooter() {
@@ -31,7 +32,7 @@ export default function SiteFooter() {
   return (
     <footer className="bg-[#0A4D7C] px-5 pt-8 pb-4 text-sm text-slate-300 sm:px-6 sm:pt-10 sm:pb-5 lg:pt-12 lg:pb-6 lg:pl-10 lg:pr-10">
       <div className="grid gap-8 sm:gap-10 lg:grid-cols-[1.35fr_0.75fr_1fr] lg:gap-12">
-        <div>
+        <Reveal>
           <Image
             src="/footer-logo.png"
             alt="Lita Finemesh — Fencing Your Property"
@@ -52,15 +53,15 @@ export default function SiteFooter() {
                 aria-label={label}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition hover:bg-[#5eead4] hover:text-[#0A4D7C]"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-[#5eead4] hover:text-[#0A4D7C]"
               >
                 <Icon size={15} />
               </a>
             ))}
           </div>
-        </div>
+        </Reveal>
 
-        <div>
+        <Reveal delay={120}>
           <h4 className="mb-6 text-xs font-bold uppercase tracking-[0.12em] text-white">
             Navigation
           </h4>
@@ -79,9 +80,9 @@ export default function SiteFooter() {
               );
             })}
           </ul>
-        </div>
+        </Reveal>
 
-        <div>
+        <Reveal delay={240}>
           <h4 className="mb-6 text-xs font-bold uppercase tracking-[0.12em] text-white">
             Working Hours
           </h4>
@@ -99,7 +100,7 @@ export default function SiteFooter() {
           </h4>
           <p className="font-bold text-white">04-4426 442 (Hotline)</p>
           <p className="mt-2 font-bold text-white">019-444 7178 (WhatsApp)</p>
-        </div>
+        </Reveal>
       </div>
 
       <div className="mt-3 border-t border-white/10 pt-3 sm:mt-4 sm:pt-4 lg:mt-5 lg:pt-5">
