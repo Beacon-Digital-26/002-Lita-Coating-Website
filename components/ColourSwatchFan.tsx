@@ -84,7 +84,6 @@ export default function ColourSwatchFan() {
         .colour-swatch-card[data-i="0"] {
           z-index: 30;
         }
-        .colour-swatch-card:hover,
         .colour-swatch-card.is-active {
           transform: translateY(
               calc(
@@ -94,6 +93,18 @@ export default function ColourSwatchFan() {
             rotate(0deg);
           z-index: 50 !important;
           box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        }
+        @media (hover: hover) and (pointer: fine) {
+          .colour-swatch-card:hover {
+            transform: translateY(
+                calc(
+                  var(--i) * var(--i) * var(--card-w) * var(--fan-drop-factor) - var(--fan-hover-lift)
+                )
+              )
+              rotate(0deg);
+            z-index: 50 !important;
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+          }
         }
         .swatch-label-name {
           font-size: calc(var(--card-w) * 0.07);
