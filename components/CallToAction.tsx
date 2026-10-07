@@ -1,4 +1,5 @@
 import { MdArrowForward } from "react-icons/md";
+import Link from "next/link";
 import Reveal from "./Reveal";
 
 export default function CallToAction() {
@@ -44,12 +45,12 @@ export default function CallToAction() {
               </Reveal>
               <Reveal delay={300}>
                 <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:justify-center md:justify-start">
-                  <button className="flex cursor-pointer items-center justify-center gap-2 rounded-full bg-teal-500 px-8 py-3 font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95">
+                  <Link href="/contact" className="flex cursor-pointer items-center justify-center gap-2 rounded-full bg-teal-500 px-8 py-3 font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95">
                     CONTACT US <MdArrowForward size={18} aria-hidden />
-                  </button>
-                  <button className="flex cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-8 py-3 font-bold text-[#004e8c] transition duration-200 hover:scale-105 hover:bg-slate-100 active:scale-95">
+                  </Link>
+                  <Link href="/service" className="flex cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-8 py-3 font-bold text-[#004e8c] transition duration-200 hover:scale-105 hover:bg-slate-100 active:scale-95">
                     VIEW BROCHURE <MdArrowForward size={18} aria-hidden />
-                  </button>
+                  </Link>
                 </div>
               </Reveal>
             </div>

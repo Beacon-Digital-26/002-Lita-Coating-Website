@@ -182,10 +182,10 @@ export default function Home() {
               </Reveal>
             </div>
             <Reveal delay={120}>
-              <button className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-teal-500 px-8 py-2 font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95">
+              <Link href="/service" className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-teal-500 px-8 py-2 font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95">
                 VIEW MORE
                 <MdArrowForward size={18} aria-hidden />
-              </button>
+              </Link>
             </Reveal>
           </div>
         </section>
@@ -264,10 +264,10 @@ export default function Home() {
               delay={160}
               className="justify-self-center lg:col-start-1 lg:row-start-2 lg:justify-self-start"
             >
-              <button className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[#00A896] px-10 py-2.5 text-sm font-bold tracking-wide text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95">
+              <Link href="/service" className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[#00A896] px-10 py-2.5 text-sm font-bold tracking-wide text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95">
                 VIEW MORE
                 <MdArrowForward size={18} aria-hidden />
-              </button>
+              </Link>
             </Reveal>
           </div>
         </section>

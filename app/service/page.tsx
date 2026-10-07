@@ -39,10 +39,10 @@ function InstallationHighlight({ icon: Icon, title, subtitle, actionLabel }: Ins
       <h3 className="font-title mb-4 text-[16px] font-bold uppercase leading-snug text-[#0a3d6b]">{title}</h3>
       <p className="font-mona text-[20px] font-normal leading-[24px] text-slate-600">{subtitle}</p>
       {actionLabel ? (
-        <button className="font-expanded mt-4 inline-flex w-fit cursor-pointer items-center gap-2 rounded-full bg-[#00A896] px-5 py-2.5 text-xs font-bold uppercase text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95">
+        <Link href="/contact" className="font-expanded mt-4 inline-flex w-fit cursor-pointer items-center gap-2 rounded-full bg-[#00A896] px-5 py-2.5 text-xs font-bold uppercase text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95">
           {actionLabel}
           <MdArrowForward size={16} aria-hidden />
-        </button>
+        </Link>
       ) : null}
     </div>
   );
@@ -333,10 +333,10 @@ export default function Service() {
             </Reveal>
 
             <Reveal delay={200}>
-              <button className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-teal-500 px-8 py-3 font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95 shadow-lg">
+              <Link href="/contact" className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-teal-500 px-8 py-3 font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95 shadow-lg">
                 CUSTOMIZATIONS
                 <MdArrowForward size={18} aria-hidden />
-              </button>
+              </Link>
             </Reveal>
           </div>
         </section>
