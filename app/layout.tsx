@@ -10,7 +10,7 @@ const monaSans = Mona_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Lite Coating",
+  title: "Lita Coating",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
