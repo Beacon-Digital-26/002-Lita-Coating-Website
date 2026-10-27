@@ -77,7 +77,7 @@ export default function PortfolioCarousel() {
           aria-label="Previous portfolio projects"
           disabled={isAtStart}
           onClick={() => scroll(-1)}
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-[#0A4D7C] transition hover:border-teal-500 hover:bg-[#47BBB4]/10 disabled:cursor-not-allowed disabled:opacity-40"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-brand-navy transition hover:border-brand-teal hover:bg-brand-teal/10 disabled:cursor-not-allowed disabled:opacity-40"
         >
           <ChevronLeft size={20} aria-hidden="true" />
         </button>
@@ -86,7 +86,7 @@ export default function PortfolioCarousel() {
           aria-label="Next portfolio projects"
           disabled={isAtEnd}
           onClick={() => scroll(1)}
-          className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-[#0A4D7C] transition hover:border-teal-500 hover:bg-[#47BBB4]/10 disabled:cursor-not-allowed disabled:opacity-40"
+          className="flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-brand-navy transition hover:border-brand-teal hover:bg-brand-teal/10 disabled:cursor-not-allowed disabled:opacity-40"
         >
           <ChevronRight size={20} aria-hidden="true" />
         </button>

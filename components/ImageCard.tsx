@@ -24,7 +24,7 @@ export default function ImageCard({
         alt={alt}
         className="h-full w-full object-cover transition duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
       />
-      <div className={`absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-[#0A4D7C]/90 via-[#0A4D7C]/25 to-transparent transition duration-500 group-hover:from-[#0A4D7C] group-hover:via-[#0A4D7C]/40 ${contentClassName}`}>
+      <div className={`absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-brand-navy/90 via-brand-navy/25 to-transparent transition duration-500 group-hover:from-brand-navy group-hover:via-brand-navy/40 ${contentClassName}`}>
         <h3 className={`font-title ${description ? "mb-3" : "mb-5"} text-2xl font-bold uppercase text-white transition duration-500 group-hover:-translate-y-1 sm:text-3xl`}>
           {title}
         </h3>

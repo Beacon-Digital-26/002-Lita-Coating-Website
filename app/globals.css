@@ -8,6 +8,17 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* Brand palette: navy base carrying two accents.
+     Teal = identity/structure (nav, icons, stats, links).
+     Red  = action/emphasis (primary CTAs, underlines, highlights). */
+  --color-brand-navy: #0a4d7c;
+  --color-brand-navy-dark: #073a5e;
+  --color-brand-teal: #47bbb4;
+  --color-brand-teal-dark: #359a94;
+  --color-brand-red: #e45967;
+  --color-brand-red-dark: #c33f4d;
+
   --color-teal-400: #47BBB4;
   --color-teal-500: #47BBB4;
   --color-teal-600: #47BBB4;

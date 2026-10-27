@@ -41,7 +41,7 @@ export default function Contact() {
           {/* Left Column: Info */}
           <div>
             <Reveal variant="left">
-              <h2 className="font-expanded mt-[20px] mb-4 text-[clamp(22px,5vw,30px)] font-bold uppercase text-[#0A4D7C]">GET IN TOUCH</h2>
+              <h2 className="font-expanded mt-[20px] mb-4 text-[clamp(22px,5vw,30px)] font-bold uppercase text-brand-navy">GET IN TOUCH</h2>
               <p className="font-mona mb-10 text-[20px] font-normal leading-[24px] text-slate-600">
                 Our engineering team is ready to assist you. Reach out via any of the channels below.
               </p>
@@ -50,11 +50,11 @@ export default function Contact() {
             <div className="space-y-8 mb-10">
               <Reveal variant="left" delay={100}>
                 <div className="flex gap-4">
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#47BBB4] text-white">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-brand-teal text-white">
                     <MdLocationOn size={24} />
                   </div>
                   <div>
-                    <h3 className="font-expanded mb-1 text-[18px] font-bold text-[#0A4D7C]">OFFICE &amp; FACTORY</h3>
+                    <h3 className="font-expanded mb-1 text-[18px] font-bold text-brand-red">OFFICE &amp; FACTORY</h3>
                     <p className="font-mona text-[18px] font-normal leading-[24px] text-slate-600">
                       Lot 111, Jalan PKNK 2, 
                       <br />
@@ -70,21 +70,21 @@ export default function Contact() {
 
               <Reveal variant="left" delay={200}>
                 <div className="flex gap-4">
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#47BBB4] text-white">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-brand-teal text-white">
                     <MdPhone size={24} />
                   </div>
                   <div>
-                    <h3 className="font-expanded mb-1 text-[18px] font-bold text-[#0A4D7C]">PHONE SERVICES</h3>
+                    <h3 className="font-expanded mb-1 text-[18px] font-bold text-brand-red">PHONE SERVICES</h3>
                     <div className="font-mona grid grid-cols-[auto_1fr] gap-x-2 gap-y-1 text-[18px] font-normal leading-[24px] text-slate-600">
                       <span className="text-slate-400">TEL:</span>
-                      <span>
-                        +604-4426 442 (HQ)<br />
-                        +604-442 5262<br />
-                        +604-442 5161<br />
-                        +604-442 5268
-                      </span>
+                      <div className="flex flex-col items-start">
+                        <a href="tel:+6044426442" className="hover:text-brand-teal hover:underline underline-offset-4">+604-4426 442 (HQ)</a>
+                        <a href="tel:+6044425262" className="hover:text-brand-teal hover:underline underline-offset-4">+604-442 5262</a>
+                        <a href="tel:+6044425161" className="hover:text-brand-teal hover:underline underline-offset-4">+604-442 5161</a>
+                        <a href="tel:+6044425268" className="hover:text-brand-teal hover:underline underline-offset-4">+604-442 5268</a>
+                      </div>
                       <span className="text-slate-400">FAX:</span>
-                      <span>+604-442 5442</span>
+                      <a href="tel:+6044425442" className="w-fit hover:text-brand-teal hover:underline underline-offset-4">+604-442 5442</a>
                     </div>
                   </div>
                 </div>
@@ -92,12 +92,12 @@ export default function Contact() {
 
               <Reveal variant="left" delay={300}>
                 <div className="flex gap-4">
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#47BBB4] text-white">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-brand-teal text-white">
                     <MdEmail size={24} />
                   </div>
                   <div>
-                    <h3 className="font-expanded mb-1 text-[18px] font-bold text-[#0A4D7C]">EMAIL CORRESPONDENCE</h3>
-                    <p className="font-mona text-[18px] font-normal leading-[24px] text-teal-600">enquiry@litafinemesh.com</p>
+                    <h3 className="font-expanded mb-1 text-[18px] font-bold text-brand-red">EMAIL CORRESPONDENCE</h3>
+                    <a href="mailto:enquiry@litafinemesh.com" className="font-mona text-[18px] font-normal leading-[24px] text-brand-teal hover:underline underline-offset-4">enquiry@litafinemesh.com</a>
                   </div>
                 </div>
               </Reveal>
@@ -105,11 +105,11 @@ export default function Contact() {
 
             <Reveal variant="left" delay={400} className="mb-10">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#47BBB4] text-white">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-brand-teal text-white">
                   <MdAccessTime size={24} />
                 </div>
                 <div>
-                  <h3 className="font-expanded mb-1 text-[18px] font-bold uppercase text-[#0A4D7C]">BUSINESS OPERATING HOURS</h3>
+                  <h3 className="font-expanded mb-1 text-[18px] font-bold uppercase text-brand-red">BUSINESS OPERATING HOURS</h3>
                   <div className="font-mona grid grid-cols-[auto_auto_1fr] gap-x-1 text-[18px] font-normal leading-[24px] text-slate-600">
                     <span>Monday - Friday</span>
                     <span>:</span>
@@ -127,7 +127,7 @@ export default function Contact() {
           <Reveal variant="right" delay={120}>
             <div className="bg-white rounded-2xl shadow-xl shadow-slate-200/50 p-8 border border-slate-100">
             <div className="flex items-center gap-3 mb-2">
-              <h2 className="font-expanded text-[clamp(22px,5vw,30px)] font-bold uppercase text-[#0A4D7C]">SEND US AN ENQUIRY</h2>
+              <h2 className="font-expanded text-[clamp(22px,5vw,30px)] font-bold uppercase text-brand-navy">SEND US AN ENQUIRY</h2>
             </div>
             <p className="font-mona mb-8 text-[20px] font-normal leading-[24px] text-slate-600">
               Fill out the specification details below and our team will respond within 24 business hours.
@@ -135,32 +135,32 @@ export default function Contact() {
 
             <form className="space-y-6">
               <div>
-                <label className="font-expanded mb-2 block text-xs font-bold text-[#0A4D7C] uppercase">FULL NAME <span className="text-red-500">*</span></label>
-                <input type="text" placeholder="e.g. Ir. Ahmad Razak" className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition" />
+                <label className="font-expanded mb-2 block text-xs font-bold text-brand-navy uppercase">FULL NAME <span className="text-brand-red">*</span></label>
+                <input type="text" placeholder="e.g. Ir. Ahmad Razak" className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-brand-teal focus:ring-1 focus:ring-brand-teal transition" />
               </div>
               
               <div>
-                <label className="font-expanded mb-2 block text-xs font-bold text-[#0A4D7C] uppercase">COMPANY NAME <span className="text-red-500">*</span></label>
-                <input type="text" placeholder="e.g. Pembinaan Mega Sdn. Bhd." className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition" />
+                <label className="font-expanded mb-2 block text-xs font-bold text-brand-navy uppercase">COMPANY NAME <span className="text-brand-red">*</span></label>
+                <input type="text" placeholder="e.g. Pembinaan Mega Sdn. Bhd." className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-brand-teal focus:ring-1 focus:ring-brand-teal transition" />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="font-expanded mb-2 block text-xs font-bold text-[#0A4D7C] uppercase">PHONE NUMBER <span className="text-red-500">*</span></label>
-                  <input type="tel" placeholder="+60 12-345 6789" className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition" />
+                  <label className="font-expanded mb-2 block text-xs font-bold text-brand-navy uppercase">PHONE NUMBER <span className="text-brand-red">*</span></label>
+                  <input type="tel" placeholder="+60 12-345 6789" className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-brand-teal focus:ring-1 focus:ring-brand-teal transition" />
                 </div>
                 <div>
-                  <label className="font-expanded mb-2 block text-xs font-bold text-[#0A4D7C] uppercase">WORK EMAIL <span className="text-red-500">*</span></label>
-                  <input type="email" placeholder="name@company.com" className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition" />
+                  <label className="font-expanded mb-2 block text-xs font-bold text-brand-navy uppercase">WORK EMAIL <span className="text-brand-red">*</span></label>
+                  <input type="email" placeholder="name@company.com" className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-brand-teal focus:ring-1 focus:ring-brand-teal transition" />
                 </div>
               </div>
 
               <div>
-                <label className="font-expanded mb-2 block text-xs font-bold text-[#0A4D7C] uppercase">YOUR MESSAGE</label>
-                <textarea rows={4} placeholder="Provide estimated linear meters, project location, or specification requirements..." className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition resize-none"></textarea>
+                <label className="font-expanded mb-2 block text-xs font-bold text-brand-navy uppercase">YOUR MESSAGE</label>
+                <textarea rows={4} placeholder="Provide estimated linear meters, project location, or specification requirements..." className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-brand-teal focus:ring-1 focus:ring-brand-teal transition resize-none"></textarea>
               </div>
 
-              <button type="button" className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-[#47BBB4] px-6 py-4 font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95">
+              <button type="button" className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-brand-red px-6 py-4 font-bold text-white transition duration-200 hover:scale-105 hover:bg-brand-red-dark active:scale-95">
                 SUBMIT ENQUIRY / REQUEST TENDER QUOTE <MdArrowForward size={18} aria-hidden />
               </button>
               

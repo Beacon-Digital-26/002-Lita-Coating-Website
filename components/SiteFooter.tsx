@@ -21,15 +21,15 @@ const SOCIAL_LINKS = [
 
 function navLinkClassName(isActive: boolean) {
   return isActive
-    ? "inline-block border-b-2 border-[#47BBB4] pb-0.5 text-[#47BBB4] transition"
-    : "inline-block text-slate-300 transition-colors duration-300 hover:text-[#47BBB4]";
+    ? "inline-block border-b-2 border-brand-teal pb-0.5 text-brand-teal transition"
+    : "inline-block text-slate-300 transition-colors duration-300 hover:text-brand-teal";
 }
 
 export default function SiteFooter() {
   const pathname = usePathname();
 
   return (
-    <footer className="bg-[#0A4D7C] px-5 pt-8 pb-4 text-sm text-slate-300 sm:px-6 sm:pt-10 sm:pb-5 lg:pt-12 lg:pb-6 lg:pl-10 lg:pr-10">
+    <footer className="bg-brand-navy px-5 pt-8 pb-4 text-sm text-slate-300 sm:px-6 sm:pt-10 sm:pb-5 lg:pt-12 lg:pb-6 lg:pl-10 lg:pr-10">
       <div className="grid gap-8 sm:gap-10 lg:grid-cols-[1.35fr_0.65fr_1.2fr_1fr] lg:gap-8 xl:gap-12">
         <Reveal>
           <Image
@@ -52,7 +52,7 @@ export default function SiteFooter() {
                 aria-label={label}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-[#47BBB4] hover:text-[#0A4D7C]"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-brand-teal hover:text-brand-navy"
               >
                 <Icon size={15} />
               </a>

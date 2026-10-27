@@ -27,23 +27,16 @@ type InstallationHighlightProps = {
   icon: IconType;
   title: string;
   subtitle: string;
-  actionLabel?: string;
 };
 
-function InstallationHighlight({ icon: Icon, title, subtitle, actionLabel }: InstallationHighlightProps) {
+function InstallationHighlight({ icon: Icon, title, subtitle }: InstallationHighlightProps) {
   return (
-    <div className="flex h-full flex-1 flex-col items-center rounded-2xl border border-slate-100 bg-white p-8 text-center shadow-xl shadow-slate-200/50 transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:shadow-2xl hover:shadow-slate-300/60">
-      <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#47BBB4] text-white">
+    <div className="group flex h-full flex-1 flex-col items-center rounded-2xl border border-slate-100 bg-white p-8 text-center shadow-xl shadow-slate-200/50 transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:shadow-2xl hover:shadow-slate-300/60">
+      <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-brand-teal text-white transition-colors duration-300 group-hover:bg-brand-red">
         <Icon size={28} aria-hidden />
       </div>
-      <h3 className="font-title mb-4 text-[16px] font-bold uppercase leading-snug text-[#0A4D7C]">{title}</h3>
+      <h3 className="font-title mb-4 text-[16px] font-bold uppercase leading-snug text-brand-navy">{title}</h3>
       <p className="font-mona text-[20px] font-normal leading-[24px] text-slate-600">{subtitle}</p>
-      {actionLabel ? (
-        <Link href="/contact" className="font-expanded mt-4 inline-flex w-fit cursor-pointer items-center gap-2 rounded-full bg-[#47BBB4] px-5 py-2.5 text-xs font-bold uppercase text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95">
-          {actionLabel}
-          <MdArrowForward size={16} aria-hidden />
-        </Link>
-      ) : null}
     </div>
   );
 }
@@ -52,10 +45,10 @@ function ProtectionFeature({ label, subtext, subtextClassName }: ProtectionFeatu
   return (
     <div className="flex flex-col">
       <div className="flex items-center gap-2.5">
-        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[#47BBB4] text-white">
+        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-red text-white">
           <MdCheck size={16} aria-hidden />
         </div>
-        <span className="font-expanded font-mona text-[18px] font-bold uppercase leading-tight tracking-[0.02em] text-[#0A4D7C] md:text-[24px]">
+        <span className="font-expanded font-mona text-[18px] font-bold uppercase leading-tight tracking-[0.02em] text-brand-navy md:text-[24px]">
           {label}
         </span>
       </div>
@@ -90,13 +83,13 @@ export default function Service() {
 
         {/* Intro Section */}
         <section className="px-4 py-14 sm:px-6 md:px-8 md:py-20">
-          <div className="mx-auto flex max-w-6xl flex-col items-center gap-16 md:flex-row md:items-start">
+          <div className="mx-auto flex max-w-6xl flex-col items-center gap-16 md:flex-row md:items-stretch">
             <div className="md:w-1/2 self-start text-left">
               <Reveal variant="left" className="inline-flex w-fit max-w-full flex-col items-start">
-                <h2 className="font-title mb-4 w-full text-left text-[clamp(28px,6vw,48px)] font-bold uppercase leading-tight text-[#0A4D7C]">
+                <h2 className="font-title mb-4 w-full text-left text-[clamp(28px,6vw,48px)] font-bold uppercase leading-tight text-brand-navy">
                   PRECISION SURFACE TECHNOLOGY
                 </h2>
-                <div className="mb-8 h-1 w-[144px] bg-[#47BBB4]" aria-hidden />
+                <div className="mb-8 h-1 w-[144px] bg-brand-red" aria-hidden />
                 <div className="w-full space-y-6 text-left font-mona text-[20px] font-normal leading-[24px] text-slate-600">
                   <p>
                     Lita Finemesh is proud to be the only fencing manufacturer in Malaysia with in-house polyester powder coating finishing plant. This allows us full control over the finishing quality and turnaround times.
@@ -110,17 +103,24 @@ export default function Service() {
             <Reveal
               variant="right"
               delay={120}
-              className="flex justify-center md:relative md:left-[60px] md:top-[30px] md:w-1/2"
+              className="flex justify-center md:relative md:left-[60px] md:w-1/2"
             >
-              <div className="group relative h-[370px] w-[370px] max-w-[370px] overflow-hidden rounded-2xl border border-slate-100 shadow-xl shadow-slate-200/50 transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:shadow-2xl">
-                <Image
-                  src="/service-polyester-coating.jpg"
-                  alt="Technician powder coating green mesh fencing in the finishing plant"
-                  width={692}
-                  height={1024}
-                  className="h-full w-full object-cover object-center transition duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, 370px"
-                />
+              <div className="group relative h-[370px] w-[370px] max-w-[370px] overflow-hidden rounded-2xl border border-slate-100 shadow-xl shadow-slate-200/50 transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:shadow-2xl md:h-auto">
+                <video
+                  aria-label="Powder coating spray application in the finishing plant"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls
+                  preload="metadata"
+                  poster="/service-polyester-coating.jpg"
+                  className="absolute inset-0 h-full w-full object-cover object-center"
+                >
+                  <source src="/spray-vid.mp4" type="video/mp4" />
+                  Your browser does not support video playback.{" "}
+                  <a href="/spray-vid.mp4">Download the powder coating video.</a>
+                </video>
               </div>
             </Reveal>
           </div>
@@ -130,7 +130,7 @@ export default function Service() {
         <section className="w-full bg-[#FFFFFF]">
           {/* Mobile: title appears before the background image instead of overlaid on it. */}
           <Reveal as="div" className="md:hidden">
-            <h2 className="font-title px-4 pt-10 text-right text-[clamp(30px,8vw,40px)] font-bold uppercase leading-[1.14] text-[#0A4D7C] sm:px-6">
+            <h2 className="font-title px-4 pt-10 text-right text-[clamp(30px,8vw,40px)] font-bold uppercase leading-[1.14] text-brand-navy sm:px-6">
               PROTECTION THAT LASTS.
             </h2>
           </Reveal>
@@ -154,7 +154,7 @@ export default function Service() {
                 variant="right"
                 className="hidden md:absolute md:right-[7.96%] md:top-[11.7%] md:block"
               >
-                <h2 className="font-title text-right text-[clamp(32px,3.38vw,51px)] font-bold uppercase leading-[1.14] text-[#0A4D7C]">
+                <h2 className="font-title text-right text-[clamp(32px,3.38vw,51px)] font-bold uppercase leading-[1.14] text-brand-navy">
                   PROTECTION
                   <br />
                   THAT
@@ -239,10 +239,10 @@ export default function Service() {
             <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-14">
               <div className="flex flex-col text-left lg:w-[58%] lg:shrink-0">
                 <Reveal variant="left">
-                  <h2 className="font-title mb-4 w-full text-left text-[clamp(28px,6vw,48px)] font-bold uppercase leading-tight text-[#0A4D7C]">
+                  <h2 className="font-title mb-4 w-full text-left text-[clamp(28px,6vw,48px)] font-bold uppercase leading-tight text-brand-navy">
                     ONE-STOP <br />INSTALLATION SERVICE
                   </h2>
-                  <div className="h-1 w-[144px] bg-[#47BBB4]" aria-hidden />
+                  <div className="h-1 w-[144px] bg-brand-red" aria-hidden />
                 </Reveal>
                 <div className="mt-8 w-full space-y-6 text-left font-mona text-[20px] font-normal leading-[24px] text-slate-600">
                   <Reveal delay={100}>
@@ -288,7 +288,6 @@ export default function Service() {
                       icon={MdVerifiedUser}
                       title="1-2 Year Process Warranty"
                       subtitle="Our powder coating process is covered by a warranty of 1 to 2 years, depending on the type of powder material used."
-                      actionLabel="Request Certificate"
                     />
                   </Reveal>
                 </div>
@@ -320,7 +319,7 @@ export default function Service() {
         <section className="overflow-visible bg-white px-4 pt-6 pb-16 sm:px-6 md:px-8 md:pt-8 md:pb-24">
           <div className="mx-auto w-full text-center">
             <Reveal>
-              <h2 className="font-title mb-4 text-[clamp(26px,6vw,40px)] font-bold uppercase text-[#0A4D7C]">
+              <h2 className="font-title mb-4 text-[clamp(26px,6vw,40px)] font-bold uppercase text-brand-navy">
                 COLOUR &amp; FINISH OPTIONS
               </h2>
               <p className="mb-16 w-full space-y-6 font-mona text-[20px] font-normal leading-[24px] text-slate-600">
@@ -333,7 +332,7 @@ export default function Service() {
             </Reveal>
 
             <Reveal delay={200}>
-              <Link href="/contact" className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-teal-500 px-8 py-3 font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95 shadow-lg">
+              <Link href="/contact" className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-brand-red px-8 py-3 font-bold text-white transition duration-200 hover:scale-105 hover:bg-brand-red-dark active:scale-95 shadow-lg">
                 CUSTOMIZATIONS
                 <MdArrowForward size={18} aria-hidden />
               </Link>

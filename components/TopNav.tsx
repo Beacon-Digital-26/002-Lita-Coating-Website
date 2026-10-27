@@ -15,14 +15,14 @@ const NAV_ITEMS = [
 
 function navLinkClassName(isActive: boolean) {
   return isActive
-    ? "relative flex h-full items-center justify-center px-3 text-[#0A4D7C] after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-100 after:bg-[#47BBB4] after:transition-transform after:duration-300 after:content-['']"
-    : "relative flex h-full items-center justify-center px-3 text-[#0A4D7C] after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-[#47BBB4] after:transition-transform after:duration-300 after:content-[''] hover:after:scale-x-100";
+    ? "relative flex h-full items-center justify-center px-3 text-brand-navy after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-100 after:bg-brand-teal after:transition-transform after:duration-300 after:content-['']"
+    : "relative flex h-full items-center justify-center px-3 text-brand-navy after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-brand-teal after:transition-transform after:duration-300 after:content-[''] hover:after:scale-x-100";
 }
 
 function mobileNavLinkClassName(isActive: boolean) {
   return isActive
-    ? "relative inline-flex w-fit px-4 py-3 text-sm font-bold text-[#0A4D7C] after:absolute after:inset-x-4 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-100 after:bg-[#47BBB4] after:transition-transform after:duration-300 after:content-['']"
-    : "relative inline-flex w-fit px-4 py-3 text-sm font-bold text-[#0A4D7C] after:absolute after:inset-x-4 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-[#47BBB4] after:transition-transform after:duration-300 after:content-[''] hover:after:scale-x-100";
+    ? "relative inline-flex w-fit px-4 py-3 text-sm font-bold text-brand-navy after:absolute after:inset-x-4 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-100 after:bg-brand-teal after:transition-transform after:duration-300 after:content-['']"
+    : "relative inline-flex w-fit px-4 py-3 text-sm font-bold text-brand-navy after:absolute after:inset-x-4 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-brand-teal after:transition-transform after:duration-300 after:content-[''] hover:after:scale-x-100";
 }
 
 export default function SiteHeader() {
@@ -59,7 +59,7 @@ export default function SiteHeader() {
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMenuOpen}
             onClick={() => setIsMenuOpen((open) => !open)}
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-[#0A4D7C] transition hover:bg-slate-100 md:hidden"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-brand-navy transition hover:bg-slate-100 md:hidden"
           >
             {isMenuOpen ? <MdClose size={22} /> : <MdMenu size={22} />}
           </button>

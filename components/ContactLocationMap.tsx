@@ -109,7 +109,7 @@ export default function ContactLocationMap({
             href={googleMapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-expanded inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[#47BBB4] px-6 py-3 font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95"
+            className="font-expanded inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-brand-teal px-6 py-3 font-bold text-white transition duration-200 hover:scale-105 hover:bg-brand-teal-dark active:scale-95"
           >
             OPEN IN GOOGLE MAPS <MdOpenInNew size={16} />
           </a>

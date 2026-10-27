@@ -30,10 +30,10 @@ export default function About() {
           <div className="mx-auto flex max-w-6xl flex-col items-center gap-12 md:flex-row md:items-start md:gap-16">
             <div className="self-start text-left md:w-1/2">
               <Reveal variant="left" className="inline-flex w-full max-w-full flex-col items-start">
-                <h2 className="font-title mb-4 w-full text-left text-[clamp(28px,6vw,48px)] font-bold uppercase leading-tight text-[#0A4D7C]">
+                <h2 className="font-title mb-4 w-full text-left text-[clamp(28px,6vw,48px)] font-bold uppercase leading-tight text-brand-navy">
                   Our Story
                 </h2>
-                <div className="mb-8 h-1 w-[144px] bg-[#47BBB4]" aria-hidden />
+                <div className="mb-8 h-1 w-[144px] bg-brand-red" aria-hidden />
                 <div className="w-full space-y-6 text-left font-mona text-[20px] font-normal leading-[24px] text-slate-600">
                   <p>
                     Founded in 2012 in Sungai Petani, Kedah, Lita Finemesh has grown into a leading
@@ -52,28 +52,28 @@ export default function About() {
                   Core Manufacturing Range
                 </p>
                 <div className="flex flex-wrap gap-2 uppercase">
-                  <span className="font-expanded inline-flex cursor-pointer items-center gap-2 rounded-full bg-teal-500 px-4 py-2 font-mona text-[12px] font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95 sm:text-[13px]">
+                  <span className="font-expanded inline-flex cursor-pointer items-center gap-2 rounded-full bg-brand-teal px-4 py-2 font-mona text-[12px] font-bold text-white transition duration-200 hover:scale-105 hover:bg-brand-red active:scale-95 sm:text-[13px]">
                     In-House Powder Coating
                   </span>
-                  <span className="font-expanded inline-flex cursor-pointer items-center rounded-full bg-teal-500 px-4 py-2 font-mona text-[12px] font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95 sm:text-[13px]">
+                  <span className="font-expanded inline-flex cursor-pointer items-center rounded-full bg-brand-teal px-4 py-2 font-mona text-[12px] font-bold text-white transition duration-200 hover:scale-105 hover:bg-brand-red active:scale-95 sm:text-[13px]">
                     Roll Top Fence
                   </span>
-                  <span className="font-expanded inline-flex cursor-pointer items-center rounded-full bg-teal-500 px-4 py-2 font-mona text-[12px] font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95 sm:text-[13px]">
+                  <span className="font-expanded inline-flex cursor-pointer items-center rounded-full bg-brand-teal px-4 py-2 font-mona text-[12px] font-bold text-white transition duration-200 hover:scale-105 hover:bg-brand-red active:scale-95 sm:text-[13px]">
                     V-Fence
                   </span>
-                  <span className="font-expanded inline-flex cursor-pointer items-center rounded-full bg-teal-500 px-4 py-2 font-mona text-[12px] font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95 sm:text-[13px]">
+                  <span className="font-expanded inline-flex cursor-pointer items-center rounded-full bg-brand-teal px-4 py-2 font-mona text-[12px] font-bold text-white transition duration-200 hover:scale-105 hover:bg-brand-red active:scale-95 sm:text-[13px]">
                     Flat Fence
                   </span>
-                  <span className="font-expanded inline-flex cursor-pointer items-center rounded-full bg-teal-500 px-4 py-2 font-mona text-[12px] font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95 sm:text-[13px]">
+                  <span className="font-expanded inline-flex cursor-pointer items-center rounded-full bg-brand-teal px-4 py-2 font-mona text-[12px] font-bold text-white transition duration-200 hover:scale-105 hover:bg-brand-red active:scale-95 sm:text-[13px]">
                     358 Anti-Climb
                   </span>
-                  <span className="font-expanded inline-flex cursor-pointer items-center rounded-full bg-teal-500 px-4 py-2 font-mona text-[12px] font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95 sm:text-[13px]">
+                  <span className="font-expanded inline-flex cursor-pointer items-center rounded-full bg-brand-teal px-4 py-2 font-mona text-[12px] font-bold text-white transition duration-200 hover:scale-105 hover:bg-brand-red active:scale-95 sm:text-[13px]">
                     Security Netting
                   </span>
-                  <span className="font-expanded inline-flex cursor-pointer items-center rounded-full bg-teal-500 px-4 py-2 font-mona text-[12px] font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95 sm:text-[13px]">
+                  <span className="font-expanded inline-flex cursor-pointer items-center rounded-full bg-brand-teal px-4 py-2 font-mona text-[12px] font-bold text-white transition duration-200 hover:scale-105 hover:bg-brand-red active:scale-95 sm:text-[13px]">
                     Gabions
                   </span>
-                  <span className="font-expanded inline-flex cursor-pointer items-center rounded-full bg-teal-500 px-4 py-2 font-mona text-[12px] font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95 sm:text-[13px]">
+                  <span className="font-expanded inline-flex cursor-pointer items-center rounded-full bg-brand-teal px-4 py-2 font-mona text-[12px] font-bold text-white transition duration-200 hover:scale-105 hover:bg-brand-red active:scale-95 sm:text-[13px]">
                     Wire Accessories
                   </span>
                 </div>
@@ -122,10 +122,10 @@ export default function About() {
                 },
               ].map((stat, index) => (
                 <Reveal key={stat.title} delay={index * 120} className="min-w-0 shrink-0 text-center">
-                  <div className="mb-2 text-[clamp(32px,8vw,52px)] font-black leading-none tabular-nums text-[#47BBB4]">
+                  <div className="mb-2 text-[clamp(32px,8vw,52px)] font-black leading-none tabular-nums text-brand-teal">
                     <AnimatedStatNumber value={stat.value} />{stat.suffix}
                   </div>
-                  <div className="font-expanded mb-2 text-center text-lg font-bold text-[#0A4D7C] uppercase">{stat.title}</div>
+                  <div className="font-expanded mb-2 text-center text-lg font-bold text-brand-navy uppercase">{stat.title}</div>
                 </Reveal>
               ))}
             </div>
@@ -136,7 +136,7 @@ export default function About() {
         <section className="px-4 py-16 sm:px-6 md:px-8 bg-slate-50">
           <div className="mx-auto max-w-6xl text-center">
             <Reveal>
-              <h2 className="font-title mb-12 text-[clamp(26px,6vw,40px)] font-bold uppercase leading-tight text-[#0A4D7C]">
+              <h2 className="font-title mb-12 text-[clamp(26px,6vw,40px)] font-bold uppercase leading-tight text-brand-navy">
                 Guiding Principles
               </h2>
             </Reveal>
@@ -171,10 +171,10 @@ export default function About() {
         <section className="px-4 py-16 sm:px-6 md:px-8 bg-white">
           <div className="mx-auto max-w-6xl text-center">
             <Reveal className="mb-12">
-              <h2 className="font-title mb-2 text-[clamp(26px,6vw,40px)] font-bold uppercase leading-tight text-[#0A4D7C]">
+              <h2 className="font-title mb-2 text-[clamp(26px,6vw,40px)] font-bold uppercase leading-tight text-brand-navy">
                 CASE PORTFOLIO
               </h2>
-              <div className="mx-auto h-1 w-[200px] bg-teal-500" aria-hidden />
+              <div className="mx-auto h-1 w-[200px] bg-brand-red" aria-hidden />
             </Reveal>
 
             <Reveal delay={120}>
