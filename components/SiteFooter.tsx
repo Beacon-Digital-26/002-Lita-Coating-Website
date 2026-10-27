@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaFacebookF, FaWhatsapp } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import Reveal from "./Reveal";
 
@@ -16,14 +16,13 @@ const NAV_LINKS = [
 
 const SOCIAL_LINKS = [
   { href: "#", label: "Facebook", Icon: FaFacebookF },
-  { href: "https://wa.me/60194447178", label: "WhatsApp", Icon: FaWhatsapp },
   { href: "mailto:enquiry@litafinemesh.com", label: "Email", Icon: MdEmail },
 ] as const;
 
 function navLinkClassName(isActive: boolean) {
   return isActive
-    ? "inline-block border-b-2 border-[#5eead4] pb-0.5 text-[#5eead4] transition"
-    : "inline-block text-slate-300 transition duration-300 hover:translate-x-1 hover:text-[#5eead4]";
+    ? "inline-block border-b-2 border-[#47BBB4] pb-0.5 text-[#47BBB4] transition"
+    : "inline-block text-slate-300 transition-colors duration-300 hover:text-[#47BBB4]";
 }
 
 export default function SiteFooter() {
@@ -31,7 +30,7 @@ export default function SiteFooter() {
 
   return (
     <footer className="bg-[#0A4D7C] px-5 pt-8 pb-4 text-sm text-slate-300 sm:px-6 sm:pt-10 sm:pb-5 lg:pt-12 lg:pb-6 lg:pl-10 lg:pr-10">
-      <div className="grid gap-8 sm:gap-10 lg:grid-cols-[1.35fr_0.75fr_1fr] lg:gap-12">
+      <div className="grid gap-8 sm:gap-10 lg:grid-cols-[1.35fr_0.65fr_1.2fr_1fr] lg:gap-8 xl:gap-12">
         <Reveal>
           <Image
             src="/footer-logo.png"
@@ -53,7 +52,7 @@ export default function SiteFooter() {
                 aria-label={label}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-[#5eead4] hover:text-[#0A4D7C]"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition duration-300 hover:-translate-y-1 hover:scale-110 hover:bg-[#47BBB4] hover:text-[#0A4D7C]"
               >
                 <Icon size={15} />
               </a>
@@ -86,7 +85,7 @@ export default function SiteFooter() {
           <h4 className="mb-6 text-xs font-bold uppercase tracking-[0.12em] text-white">
             Working Hours
           </h4>
-          <div className="mb-8 grid grid-cols-[auto_1fr] gap-x-4 gap-y-3 text-slate-300">
+          <div className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-3 text-slate-300">
             <span>Mon - Fri:</span>
             <span>8:30 AM - 5:30 PM</span>
             <span>Sat:</span>
@@ -94,12 +93,23 @@ export default function SiteFooter() {
             <span>Sun &amp; PH:</span>
             <span>Closed</span>
           </div>
+        </Reveal>
 
-          <h4 className="mb-2 text-xs font-bold uppercase tracking-[0.12em] text-white">
-            Direct Sales Line
+        <Reveal delay={360}>
+          <h4 className="mb-6 text-xs font-bold uppercase tracking-[0.12em] text-white">
+            Contact Numbers
           </h4>
-          <p className="font-bold text-white">04-4426 442 (Hotline)</p>
-          <p className="mt-2 font-bold text-white">019-444 7178 (WhatsApp)</p>
+          <div className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-slate-300">
+            <span>Tel:</span>
+            <div className="flex flex-col items-start gap-1">
+              <a href="tel:+6044426442" className={navLinkClassName(false)}>+604-4426 442 (HQ)</a>
+              <a href="tel:+6044425262" className={navLinkClassName(false)}>+604-442 5262</a>
+              <a href="tel:+6044425161" className={navLinkClassName(false)}>+604-442 5161</a>
+              <a href="tel:+6044425268" className={navLinkClassName(false)}>+604-442 5268</a>
+            </div>
+            <span>Fax:</span>
+            <a href="tel:+6044425442" className={`w-fit ${navLinkClassName(false)}`}>+604-442 5442</a>
+          </div>
         </Reveal>
       </div>
 

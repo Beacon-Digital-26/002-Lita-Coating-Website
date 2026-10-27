@@ -6,7 +6,7 @@ export default function CallToAction() {
   return (
     <section className="flex justify-center bg-white px-4 py-12 sm:px-6 sm:py-16">
       <Reveal variant="zoom" className="mx-auto w-full max-w-[1372px]">
-        <div className="relative min-h-[320px] w-full overflow-hidden rounded-2xl bg-[#004e8c] py-10 md:h-[377px] md:py-0">
+        <div className="relative min-h-[320px] w-full overflow-hidden rounded-2xl bg-[#0A4D7C] py-10 md:h-[377px] md:py-0">
           <div
             className="absolute right-0 top-0 h-64 w-64 translate-x-1/2 -translate-y-1/2"
             aria-hidden
@@ -48,7 +48,7 @@ export default function CallToAction() {
                   <Link href="/contact" className="flex cursor-pointer items-center justify-center gap-2 rounded-full bg-teal-500 px-8 py-3 font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95">
                     CONTACT US <MdArrowForward size={18} aria-hidden />
                   </Link>
-                  <Link href="/service" className="flex cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-8 py-3 font-bold text-[#004e8c] transition duration-200 hover:scale-105 hover:bg-slate-100 active:scale-95">
+                  <Link href="/service" className="flex cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-8 py-3 font-bold text-[#0A4D7C] transition duration-200 hover:scale-105 hover:bg-slate-100 active:scale-95">
                     VIEW BROCHURE <MdArrowForward size={18} aria-hidden />
                   </Link>
                 </div>

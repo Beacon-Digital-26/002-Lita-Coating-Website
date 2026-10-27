@@ -189,7 +189,7 @@ export default function ColourSwatchFan() {
                   <div
                     className={`swatch-label-strip shrink-0 text-left ${i < 0 ? "swatch-label-strip--from-left" : ""} ${i > 0 ? "swatch-label-strip--from-right" : ""}`}
                   >
-                    <h4 className="swatch-label-name font-bold uppercase text-[#004e8c]">{item.name}</h4>
+                    <h4 className="swatch-label-name font-bold uppercase text-[#0A4D7C]">{item.name}</h4>
                     <p className="swatch-label-code text-teal-600">{item.code}</p>
                   </div>
                 </div>

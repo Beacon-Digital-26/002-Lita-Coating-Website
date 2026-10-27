@@ -27,10 +27,10 @@ export default function Home() {
             backgroundPosition: "center 22%",
           }}
         >
-          <div className="relative z-10 left-[calc(50%-50vw)] w-screen">
-            <div className="animate-enter w-fit max-w-[90vw] rounded-r-2xl bg-[#00365A]/60 py-6 pl-6 pr-6 text-left backdrop-blur-sm sm:max-w-2xl sm:py-8 sm:pl-8 sm:pr-12 md:max-w-4xl md:py-10 md:pl-10 md:pr-16 lg:max-w-5xl lg:pl-16 lg:pr-20">
+          <div className="relative z-10 flex w-full justify-center">
+            <div className="animate-enter w-fit max-w-[90vw] rounded-2xl bg-[#0A4D7C]/60 px-6 py-6 text-center backdrop-blur-sm sm:max-w-2xl sm:px-8 sm:py-8 md:max-w-4xl md:px-10 md:py-10 lg:max-w-5xl lg:px-16">
               <p
-                className="font-mona animate-enter mb-3 text-xs font-bold uppercase tracking-[0.3em] text-[#00A896] sm:text-sm"
+                className="font-mona animate-enter mb-3 text-xs font-bold uppercase tracking-[0.3em] text-[#47BBB4] sm:text-sm"
                 style={{ animationDelay: "150ms" }}
               >
                 1st in Malaysia
@@ -45,7 +45,7 @@ export default function Home() {
               <div className="animate-enter" style={{ animationDelay: "430ms" }}>
                 <Link
                   href="/service"
-                  className="font-expanded inline-flex cursor-pointer items-center gap-2 rounded-full bg-[#00A896] px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95"
+                  className="font-expanded inline-flex cursor-pointer items-center gap-2 rounded-full bg-[#47BBB4] px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95"
                 >
                   Explore Services
                   <MdArrowForward size={20} />
@@ -75,11 +75,11 @@ export default function Home() {
           </div>
           <div className="relative z-10 mx-auto max-w-6xl text-center">
             <Reveal>
-              <h2 className="font-title mx-auto mb-16 max-w-5xl text-center text-[clamp(26px,5.5vw,56px)] font-bold uppercase leading-[1.15] tracking-normal text-[#004578] md:leading-[1.1]">
+              <h2 className="font-title mx-auto mb-16 max-w-5xl text-center text-[clamp(26px,5.5vw,56px)] font-bold uppercase leading-[1.15] tracking-normal text-[#0A4D7C] md:leading-[1.1]">
                 <span className="md:hidden">
                   <span className="block">
                     Malaysia&apos;s{" "}
-                    <span className="underline decoration-[#00A896] decoration-[4px] underline-offset-1 sm:underline-offset-2">
+                    <span className="underline decoration-[#47BBB4] decoration-[4px] underline-offset-1 sm:underline-offset-2">
                       First
                     </span>
                   </span>
@@ -89,7 +89,7 @@ export default function Home() {
                 <span className="hidden md:block">
                   <span className="block">
                     Malaysia&apos;s{" "}
-                    <span className="underline decoration-[#00A896] decoration-[4px] underline-offset-[8px]">
+                    <span className="underline decoration-[#47BBB4] decoration-[4px] underline-offset-[8px]">
                       First
                     </span>{" "}
                     In-House
@@ -101,10 +101,10 @@ export default function Home() {
             <div className="grid gap-8 text-center md:grid-cols-3 md:gap-10 lg:gap-16">
               <Reveal className="h-full">
                 <div className="flex h-full flex-col items-center rounded-2xl border border-slate-100 bg-white p-8 shadow-xl shadow-slate-200/50 transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:shadow-2xl hover:shadow-slate-300/60">
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#00A896] text-white">
+                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#47BBB4] text-white">
                     <MdFactory size={28} />
                   </div>
-                  <h3 className="font-title mb-4 text-[16px] font-bold uppercase leading-snug text-[#0a3d6b]">
+                  <h3 className="font-title mb-4 text-[16px] font-bold uppercase leading-snug text-[#0A4D7C]">
                     Full Quality Control
                   </h3>
                   <p className="font-mona text-[20px] font-normal leading-[24px] text-slate-600">
@@ -114,10 +114,10 @@ export default function Home() {
               </Reveal>
               <Reveal delay={140} className="h-full">
                 <div className="flex h-full flex-col items-center rounded-2xl border border-slate-100 bg-white p-8 shadow-xl shadow-slate-200/50 transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:shadow-2xl hover:shadow-slate-300/60">
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#00A896] text-white">
+                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#47BBB4] text-white">
                     <MdWbSunny size={28} />
                   </div>
-                  <h3 className="font-title mb-4 text-[16px] font-bold uppercase leading-snug text-[#0a3d6b]">
+                  <h3 className="font-title mb-4 text-[16px] font-bold uppercase leading-snug text-[#0A4D7C]">
                     Weather Resistance
                   </h3>
                   <p className="font-mona text-[20px] font-normal leading-[24px] text-slate-600">
@@ -127,10 +127,10 @@ export default function Home() {
               </Reveal>
               <Reveal delay={280} className="h-full">
                 <div className="flex h-full flex-col items-center rounded-2xl border border-slate-100 bg-white p-8 shadow-xl shadow-slate-200/50 transition duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2 hover:shadow-2xl hover:shadow-slate-300/60">
-                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#00A896] text-white">
+                  <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#47BBB4] text-white">
                     <MdPalette size={28} />
                   </div>
-                  <h3 className="font-title mb-4 text-[16px] font-bold uppercase leading-snug text-[#0a3d6b]">
+                  <h3 className="font-title mb-4 text-[16px] font-bold uppercase leading-snug text-[#0A4D7C]">
                     Architectural Finishes
                   </h3>
                   <p className="font-mona text-[20px] font-normal leading-[24px] text-slate-600">
@@ -146,9 +146,9 @@ export default function Home() {
         <section className="bg-slate-50 px-4 py-16 text-center sm:px-6 md:px-8 md:py-20">
           <div className="mx-auto max-w-6xl">
             <Reveal>
-              <h2 className="font-title mb-4 text-[clamp(28px,6vw,40px)] font-bold uppercase text-[#004e8c]">Applications</h2>
+              <h2 className="font-title mb-4 text-[clamp(28px,6vw,40px)] font-bold uppercase text-[#0A4D7C]">Applications</h2>
               <div
-                className="mx-auto mb-12 h-[5px] w-[200px] rounded-full bg-[#00A896]"
+                className="mx-auto mb-12 h-[5px] w-[200px] rounded-full bg-[#47BBB4]"
                 aria-hidden
               />
             </Reveal>
@@ -195,7 +195,7 @@ export default function Home() {
           <div className="mx-auto grid w-full max-w-[1376px] grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,32%)_minmax(0,1fr)] lg:items-center lg:gap-8 xl:gap-16">
             <div className="w-full text-center lg:col-start-1 lg:row-start-1 lg:max-w-[380px] lg:self-center lg:text-left">
               <Reveal variant="left">
-                <h2 className="font-title mb-3 text-center text-[clamp(32px,8vw,50px)] font-bold uppercase leading-tight tracking-[-0.75px] text-[#004e8c] lg:text-left">
+                <h2 className="font-title mb-3 text-center text-[clamp(32px,8vw,50px)] font-bold uppercase leading-tight tracking-[-0.75px] text-[#0A4D7C] lg:text-left">
                   Colour &amp;
                   <br />
                   Finish Options
@@ -246,10 +246,10 @@ export default function Home() {
                           style={{ backgroundColor: item.color }}
                         />
                         <div className="flex flex-1 flex-col justify-center gap-0.5 px-3 text-left lg:px-4">
-                          <h4 className="font-mona text-[13px] font-bold uppercase leading-tight tracking-[-0.25px] text-[#004e8c] sm:text-[17px] lg:text-[24px] lg:tracking-[-0.75px]">
+                          <h4 className="font-mona text-[13px] font-bold uppercase leading-tight tracking-[-0.25px] text-[#0A4D7C] sm:text-[17px] lg:text-[24px] lg:tracking-[-0.75px]">
                             {item.name}
                           </h4>
-                          <p className="font-mona text-[10px] font-normal leading-tight text-[#00786C] sm:text-[12px] lg:text-[16px]">
+                          <p className="font-mona text-[10px] font-normal leading-tight text-[#47BBB4] sm:text-[12px] lg:text-[16px]">
                             {item.code}
                           </p>
                         </div>
@@ -264,7 +264,7 @@ export default function Home() {
               delay={160}
               className="justify-self-center lg:col-start-1 lg:row-start-2 lg:justify-self-start"
             >
-              <Link href="/service" className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[#00A896] px-10 py-2.5 text-sm font-bold tracking-wide text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95">
+              <Link href="/service" className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[#47BBB4] px-10 py-2.5 text-sm font-bold tracking-wide text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95">
                 VIEW MORE
                 <MdArrowForward size={18} aria-hidden />
               </Link>
@@ -295,17 +295,17 @@ export default function Home() {
               <div className="flex flex-wrap items-center gap-4">
                 <Link
                   href="/about"
-                  className="font-expanded inline-flex h-[42px] w-[204px] cursor-pointer items-center justify-center gap-2 rounded-full bg-[#00AB94] font-mona text-[13px] font-bold uppercase leading-none tracking-[0.6px] text-white transition duration-200 hover:scale-105 hover:bg-[#009882] active:scale-95"
+                  className="font-expanded inline-flex h-[42px] w-[204px] cursor-pointer items-center justify-center gap-2 rounded-full bg-[#47BBB4] font-mona text-[13px] font-bold uppercase leading-none tracking-[0.6px] text-white transition duration-200 hover:scale-105 hover:bg-[#47BBB4] active:scale-95"
                 >
                   About Us
                   <MdArrowForward size={18} aria-hidden />
                 </Link>
                 <Link
                   href="/contact"
-                  className="font-expanded inline-flex h-[42px] w-[204px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white font-mona text-[13px] font-bold uppercase leading-none tracking-[0.6px] text-[#00365A] transition duration-200 hover:scale-105 hover:bg-slate-100 active:scale-95"
+                  className="font-expanded inline-flex h-[42px] w-[204px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white font-mona text-[13px] font-bold uppercase leading-none tracking-[0.6px] text-[#0A4D7C] transition duration-200 hover:scale-105 hover:bg-slate-100 active:scale-95"
                 >
                   Contact Us
-                  <MdArrowForward size={18} className="shrink-0 text-[#00365A]" aria-hidden />
+                  <MdArrowForward size={18} className="shrink-0 text-[#0A4D7C]" aria-hidden />
                 </Link>
               </div>
             </Reveal>
@@ -318,7 +318,7 @@ export default function Home() {
               ].map((stat, index) => (
                 <Reveal key={stat.label} variant="right" delay={index * 120}>
                   <div className="flex w-fit flex-col items-start">
-                    <div className="text-[clamp(28px,7vw,52px)] font-black leading-none text-[#00A896] tabular-nums">
+                    <div className="text-[clamp(28px,7vw,52px)] font-black leading-none text-[#47BBB4] tabular-nums">
                       <AnimatedStatNumber value={stat.value} suffix={stat.suffix} />
                     </div>
                     <div className="font-mona mt-2 text-left text-[11px] font-bold uppercase leading-snug tracking-[0.6px] text-white/95 sm:text-[12px]">

@@ -15,14 +15,14 @@ const NAV_ITEMS = [
 
 function navLinkClassName(isActive: boolean) {
   return isActive
-    ? "relative flex h-full items-center justify-center px-3 text-[#0A4D7C] after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-100 after:bg-[#00A896] after:transition-transform after:duration-300 after:content-['']"
-    : "relative flex h-full items-center justify-center px-3 text-[#0A4D7C] after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-[#00A896] after:transition-transform after:duration-300 after:content-[''] hover:after:scale-x-100";
+    ? "relative flex h-full items-center justify-center px-3 text-[#0A4D7C] after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-100 after:bg-[#47BBB4] after:transition-transform after:duration-300 after:content-['']"
+    : "relative flex h-full items-center justify-center px-3 text-[#0A4D7C] after:absolute after:inset-x-3 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-[#47BBB4] after:transition-transform after:duration-300 after:content-[''] hover:after:scale-x-100";
 }
 
 function mobileNavLinkClassName(isActive: boolean) {
   return isActive
-    ? "relative inline-flex w-fit px-4 py-3 text-sm font-bold text-[#0A4D7C] after:absolute after:inset-x-4 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-100 after:bg-[#00A896] after:transition-transform after:duration-300 after:content-['']"
-    : "relative inline-flex w-fit px-4 py-3 text-sm font-bold text-[#0A4D7C] after:absolute after:inset-x-4 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-[#00A896] after:transition-transform after:duration-300 after:content-[''] hover:after:scale-x-100";
+    ? "relative inline-flex w-fit px-4 py-3 text-sm font-bold text-[#0A4D7C] after:absolute after:inset-x-4 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-100 after:bg-[#47BBB4] after:transition-transform after:duration-300 after:content-['']"
+    : "relative inline-flex w-fit px-4 py-3 text-sm font-bold text-[#0A4D7C] after:absolute after:inset-x-4 after:bottom-0 after:h-0.5 after:origin-left after:scale-x-0 after:bg-[#47BBB4] after:transition-transform after:duration-300 after:content-[''] hover:after:scale-x-100";
 }
 
 export default function SiteHeader() {

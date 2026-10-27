@@ -50,11 +50,11 @@ export default function Contact() {
             <div className="space-y-8 mb-10">
               <Reveal variant="left" delay={100}>
                 <div className="flex gap-4">
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#00A896] text-white">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#47BBB4] text-white">
                     <MdLocationOn size={24} />
                   </div>
                   <div>
-                    <h3 className="font-expanded mb-1 text-[18px] font-bold text-[#004e8c]">OFFICE &amp; FACTORY</h3>
+                    <h3 className="font-expanded mb-1 text-[18px] font-bold text-[#0A4D7C]">OFFICE &amp; FACTORY</h3>
                     <p className="font-mona text-[18px] font-normal leading-[24px] text-slate-600">
                       Lot 111, Jalan PKNK 2, 
                       <br />
@@ -70,20 +70,21 @@ export default function Contact() {
 
               <Reveal variant="left" delay={200}>
                 <div className="flex gap-4">
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#00A896] text-white">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#47BBB4] text-white">
                     <MdPhone size={24} />
                   </div>
                   <div>
-                    <h3 className="font-expanded mb-1 text-[18px] font-bold text-[#004e8c]">PHONE SERVICES</h3>
+                    <h3 className="font-expanded mb-1 text-[18px] font-bold text-[#0A4D7C]">PHONE SERVICES</h3>
                     <div className="font-mona grid grid-cols-[auto_1fr] gap-x-2 gap-y-1 text-[18px] font-normal leading-[24px] text-slate-600">
                       <span className="text-slate-400">TEL:</span>
                       <span>
-                        +604 4426 442 (HQ)<br />
-                        +604 4426 443<br />
-                        +604 4426 444
+                        +604-4426 442 (HQ)<br />
+                        +604-442 5262<br />
+                        +604-442 5161<br />
+                        +604-442 5268
                       </span>
                       <span className="text-slate-400">FAX:</span>
-                      <span>+604 442 5442</span>
+                      <span>+604-442 5442</span>
                     </div>
                   </div>
                 </div>
@@ -91,11 +92,11 @@ export default function Contact() {
 
               <Reveal variant="left" delay={300}>
                 <div className="flex gap-4">
-                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#00A896] text-white">
+                  <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#47BBB4] text-white">
                     <MdEmail size={24} />
                   </div>
                   <div>
-                    <h3 className="font-expanded mb-1 text-[18px] font-bold text-[#004e8c]">EMAIL CORRESPONDENCE</h3>
+                    <h3 className="font-expanded mb-1 text-[18px] font-bold text-[#0A4D7C]">EMAIL CORRESPONDENCE</h3>
                     <p className="font-mona text-[18px] font-normal leading-[24px] text-teal-600">enquiry@litafinemesh.com</p>
                   </div>
                 </div>
@@ -104,11 +105,11 @@ export default function Contact() {
 
             <Reveal variant="left" delay={400} className="mb-10">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#00A896] text-white">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#47BBB4] text-white">
                   <MdAccessTime size={24} />
                 </div>
                 <div>
-                  <h3 className="font-expanded mb-1 text-[18px] font-bold uppercase text-[#004e8c]">BUSINESS OPERATING HOURS</h3>
+                  <h3 className="font-expanded mb-1 text-[18px] font-bold uppercase text-[#0A4D7C]">BUSINESS OPERATING HOURS</h3>
                   <div className="font-mona grid grid-cols-[auto_auto_1fr] gap-x-1 text-[18px] font-normal leading-[24px] text-slate-600">
                     <span>Monday - Friday</span>
                     <span>:</span>
@@ -134,32 +135,32 @@ export default function Contact() {
 
             <form className="space-y-6">
               <div>
-                <label className="font-expanded mb-2 block text-xs font-bold text-[#004e8c] uppercase">FULL NAME <span className="text-red-500">*</span></label>
+                <label className="font-expanded mb-2 block text-xs font-bold text-[#0A4D7C] uppercase">FULL NAME <span className="text-red-500">*</span></label>
                 <input type="text" placeholder="e.g. Ir. Ahmad Razak" className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition" />
               </div>
               
               <div>
-                <label className="font-expanded mb-2 block text-xs font-bold text-[#004e8c] uppercase">COMPANY NAME <span className="text-red-500">*</span></label>
+                <label className="font-expanded mb-2 block text-xs font-bold text-[#0A4D7C] uppercase">COMPANY NAME <span className="text-red-500">*</span></label>
                 <input type="text" placeholder="e.g. Pembinaan Mega Sdn. Bhd." className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition" />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="font-expanded mb-2 block text-xs font-bold text-[#004e8c] uppercase">PHONE NUMBER <span className="text-red-500">*</span></label>
+                  <label className="font-expanded mb-2 block text-xs font-bold text-[#0A4D7C] uppercase">PHONE NUMBER <span className="text-red-500">*</span></label>
                   <input type="tel" placeholder="+60 12-345 6789" className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition" />
                 </div>
                 <div>
-                  <label className="font-expanded mb-2 block text-xs font-bold text-[#004e8c] uppercase">WORK EMAIL <span className="text-red-500">*</span></label>
+                  <label className="font-expanded mb-2 block text-xs font-bold text-[#0A4D7C] uppercase">WORK EMAIL <span className="text-red-500">*</span></label>
                   <input type="email" placeholder="name@company.com" className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition" />
                 </div>
               </div>
 
               <div>
-                <label className="font-expanded mb-2 block text-xs font-bold text-[#004e8c] uppercase">YOUR MESSAGE</label>
+                <label className="font-expanded mb-2 block text-xs font-bold text-[#0A4D7C] uppercase">YOUR MESSAGE</label>
                 <textarea rows={4} placeholder="Provide estimated linear meters, project location, or specification requirements..." className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition resize-none"></textarea>
               </div>
 
-              <button type="button" className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-[#00A896] px-6 py-4 font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95">
+              <button type="button" className="flex w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-[#47BBB4] px-6 py-4 font-bold text-white transition duration-200 hover:scale-105 hover:bg-teal-600 active:scale-95">
                 SUBMIT ENQUIRY / REQUEST TENDER QUOTE <MdArrowForward size={18} aria-hidden />
               </button>
               
