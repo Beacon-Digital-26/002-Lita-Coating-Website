@@ -30,7 +30,7 @@ export default function SiteHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-100 flex flex-col bg-white shadow-sm">
+    <header className="fixed inset-x-0 top-0 z-1000 flex flex-col bg-white shadow-sm">
       <div className="flex items-center justify-between gap-2 px-4 py-3 sm:gap-3 sm:px-6 md:px-8 md:py-4">
         <Link href="/" className="flex shrink-0 items-center" onClick={() => setIsMenuOpen(false)}>
           <Image

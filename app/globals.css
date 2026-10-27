@@ -138,6 +138,20 @@ summary {
   }
 }
 
+.animate-overlay-fade {
+  animation: overlay-fade 220ms ease-out both;
+}
+
+@keyframes overlay-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes float-drift {
   0%,
   100% {
