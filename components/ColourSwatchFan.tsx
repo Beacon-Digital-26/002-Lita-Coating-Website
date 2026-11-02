@@ -22,8 +22,8 @@ const FAN = {
 } as const;
 
 const SWATCHES = [
-  { name: "MATTE BLACK", code: "RAL 9005", color: "#111111" },
-  { name: "BROWN", code: "RAL 8011", color: "#5c4033" },
+  { name: "MATT BLACK", code: "RAL 9005", color: "#111111" },
+  { name: "BROWN", code: "RAL 8019", color: "#5c4033" },
   { name: "GREEN", code: "RAL 6005", color: "#32a852" },
   { name: "NAVY BLUE", code: "RAL 5003", color: "#2b3b6b" },
   { name: "INDUSTRIAL GRAY", code: "RAL 7004", color: "#8a8d91" },

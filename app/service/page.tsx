@@ -266,7 +266,7 @@ export default function Service() {
                     <InstallationHighlight
                       icon={MdHandyman}
                       title="Experienced Installers"
-                      subtitle="Certified CIDB & Site-Trained Crews"
+                      subtitle="Site-Trained Crews"
                     />
                   </Reveal>
                   <Reveal delay={120} className="h-full">

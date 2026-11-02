@@ -79,12 +79,7 @@ export default function Contact() {
                       <span className="text-slate-400">TEL:</span>
                       <div className="flex flex-col items-start">
                         <a href="tel:+6044426442" className="hover:text-brand-teal hover:underline underline-offset-4">+604-4426 442 (HQ)</a>
-                        <a href="tel:+6044425262" className="hover:text-brand-teal hover:underline underline-offset-4">+604-442 5262</a>
-                        <a href="tel:+6044425161" className="hover:text-brand-teal hover:underline underline-offset-4">+604-442 5161</a>
-                        <a href="tel:+6044425268" className="hover:text-brand-teal hover:underline underline-offset-4">+604-442 5268</a>
                       </div>
-                      <span className="text-slate-400">FAX:</span>
-                      <a href="tel:+6044425442" className="w-fit hover:text-brand-teal hover:underline underline-offset-4">+604-442 5442</a>
                     </div>
                   </div>
                 </div>

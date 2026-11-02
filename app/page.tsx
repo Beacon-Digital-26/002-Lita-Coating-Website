@@ -155,7 +155,7 @@ export default function Home() {
             <div className="grid gap-6 md:grid-cols-3 mb-10">
               <Reveal variant="zoom">
                 <ImageCard
-                  src="https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?q=80&w=800&auto=format&fit=crop"
+                  src="/application/fencing.jpg"
                   alt="Fencing"
                   title="Fencing"
                   className="h-64 rounded-2xl"
@@ -211,8 +211,8 @@ export default function Home() {
                 {
                   offsetClass: "pt-16 sm:pt-20 md:pt-28",
                   swatches: [
-                    { name: "MATTE BLACK", code: "RAL 9005", color: "#111111" },
-                    { name: "BROWN", code: "RAL 8011", color: "#5c4033" },
+                    { name: "MATT BLACK", code: "RAL 9005", color: "#111111" },
+                    { name: "BROWN", code: "RAL 8019", color: "#5c4033" },
                   ],
                 },
                 {
