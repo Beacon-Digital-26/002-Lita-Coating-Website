@@ -3,7 +3,7 @@ import Link from "next/link";
 import SiteHeader from "@/components/TopNav";
 import SiteFooter from "@/components/SiteFooter";
 import AnimatedStatNumber from "@/components/AnimatedStatNumber";
-import ImageCard from "@/components/ImageCard";
+import PortfolioCarousel from "@/components/PortfolioCarousel";
 import Reveal from "@/components/Reveal";
 import {
   MdWorkspacePremium,
@@ -142,50 +142,18 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Applications Section */}
+        {/* Case Portfolio */}
         <section className="bg-slate-50 px-4 py-16 text-center sm:px-6 md:px-8 md:py-20">
           <div className="mx-auto max-w-6xl">
-            <Reveal>
-              <h2 className="font-title mb-4 text-[clamp(28px,6vw,40px)] font-bold uppercase text-brand-navy">Applications</h2>
-              <div
-                className="mx-auto mb-12 h-[5px] w-[200px] rounded-full bg-brand-red"
-                aria-hidden
-              />
+            <Reveal className="mb-12">
+              <h2 className="font-title mb-2 text-[clamp(26px,6vw,40px)] font-bold uppercase leading-tight text-brand-navy">
+                CASE PORTFOLIO
+              </h2>
+              <div className="mx-auto h-1 w-[200px] bg-brand-red" aria-hidden />
             </Reveal>
-            <div className="grid gap-6 md:grid-cols-3 mb-10">
-              <Reveal variant="zoom">
-                <ImageCard
-                  src="/application/fencing.jpg"
-                  alt="Fencing"
-                  title="Fencing"
-                  className="h-64 rounded-2xl"
-                  contentClassName="px-6 pt-6 pb-0 sm:px-8 sm:pt-8 sm:pb-0"
-                />
-              </Reveal>
-              <Reveal variant="zoom" delay={140}>
-                <ImageCard
-                  src="https://images.unsplash.com/photo-1616423640778-28d1b53229bd?q=80&w=800&auto=format&fit=crop"
-                  alt="Pipe valves"
-                  title="Pipe Valves"
-                  className="h-64 rounded-2xl"
-                  contentClassName="px-6 pt-6 pb-0 sm:px-8 sm:pt-8 sm:pb-0"
-                />
-              </Reveal>
-              <Reveal variant="zoom" delay={280}>
-                <ImageCard
-                  src="https://images.unsplash.com/photo-1534224039826-c7a0eda0e6b3?q=80&w=800&auto=format&fit=crop"
-                  alt="Aluminium profile"
-                  title="Aluminium Profile"
-                  className="h-64 rounded-2xl"
-                  contentClassName="px-6 pt-6 pb-0 sm:px-8 sm:pt-8 sm:pb-0"
-                />
-              </Reveal>
-            </div>
+
             <Reveal delay={120}>
-              <Link href="/service" className="inline-flex cursor-pointer items-center justify-center gap-2 rounded-full bg-brand-red px-8 py-2 font-bold text-white transition duration-200 hover:scale-105 hover:bg-brand-red-dark active:scale-95">
-                VIEW MORE
-                <MdArrowForward size={18} aria-hidden />
-              </Link>
+              <PortfolioCarousel />
             </Reveal>
           </div>
         </section>

@@ -4,7 +4,6 @@ import HeroSectionShell from "@/components/HeroSectionShell";
 import CallToAction from "@/components/CallToAction";
 import AnimatedStatNumber from "@/components/AnimatedStatNumber";
 import ImageCard from "@/components/ImageCard";
-import PortfolioCarousel from "@/components/PortfolioCarousel";
 import Reveal from "@/components/Reveal";
 
 export default function About() {
@@ -164,22 +163,6 @@ export default function About() {
                 />
               </Reveal>
             </div>
-          </div>
-        </section>
-
-        {/* Case Portfolio */}
-        <section className="px-4 py-16 sm:px-6 md:px-8 bg-white">
-          <div className="mx-auto max-w-6xl text-center">
-            <Reveal className="mb-12">
-              <h2 className="font-title mb-2 text-[clamp(26px,6vw,40px)] font-bold uppercase leading-tight text-brand-navy">
-                CASE PORTFOLIO
-              </h2>
-              <div className="mx-auto h-1 w-[200px] bg-brand-red" aria-hidden />
-            </Reveal>
-
-            <Reveal delay={120}>
-              <PortfolioCarousel />
-            </Reveal>
           </div>
         </section>
 
